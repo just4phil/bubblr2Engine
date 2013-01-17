@@ -21,10 +21,10 @@ public class BubblrDesktop implements IActivityRequestHandler {
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
 		cfg.title = "bubblr";
 		cfg.useGL20 = false;
-		cfg.width = 1280;
-		cfg.height = 768;
-//		cfg.width = 800;
-//		cfg.height = 480;
+//		cfg.width = 1280;
+//		cfg.height = 768;
+		cfg.width = 800;
+		cfg.height = 480;
 		new LwjglApplication(new Bubblr(application, false), cfg);
 	}
 

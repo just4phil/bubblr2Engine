@@ -17,13 +17,7 @@ public class Assets {
 
 	
 	//------ cool menu ------------
-
-	public static TextureRegion btnAllMenu;
-	public static TextureRegion btnAllMenuPressed;
-	
-	//------------------------------
-
-	
+		
 	private final static String FILE_IMAGE_ATLAS = "data/imageatlas/pages.atlas";
 	private final static String FILE_UI_SKIN = "skin/uiskin.json";
 	public static TextureAtlas imageAtlas;
@@ -49,9 +43,6 @@ public class Assets {
 	public static TextureRegion icon_rank;
 	public static TextureRegion icon_contact;
 	public static TextureRegion icon_music;
-	public static TextureRegion icon_buy;
-	public static TextureRegion icon_share;
-	public static TextureRegion icon_googleplay;
 	public static TextureRegion icon_www;
     public static TextureRegion whitePixel;
     public static TextureRegion menuButton1;
@@ -67,8 +58,6 @@ public class Assets {
 	public static TextureRegion j2;
 	public static TextureRegion u1;
 	public static TextureRegion u2;
-	
-
 	public static TextureRegion dummyIdle;
 
 
@@ -159,9 +148,6 @@ public class Assets {
 		//--------------- ITEMS ----------------------------------------------------
 		if (m_assetManager.isLoaded(FILE_IMAGE_ATLAS)) {
 					
-			btnAllMenu 			= m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("btnallmenu");
-			btnAllMenuPressed 	= m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("btnallmenupressed");	
-			
 			ninePatch_black 	= m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("ninePatch_black");
 			ninePatch_white 	= m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("ninePatch_white");
 			musicOff 			= m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("musicOff");
@@ -178,9 +164,6 @@ public class Assets {
 			icon_rank = m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("icon_rank");
 			icon_contact = m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("icon_contact");
 			icon_music = m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("icon_music");
-			icon_buy = m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("icon_buy");
-			icon_share = m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("icon_share");
-			icon_googleplay = m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("icon_googleplay");
 			icon_www = m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("icon_www");
 			optionsOff = m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("optionsOff");
 			optionsOn = m_assetManager.get(FILE_IMAGE_ATLAS, TextureAtlas.class).findRegion("optionsOn");

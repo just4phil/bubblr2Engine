@@ -9,11 +9,7 @@ public abstract class Screen {
 	protected Bubblr bubblr;
 	
 	BubblrPreferences prefs;
-	int i;
-	int len;
-	
 
-	
 
 	public Screen (Bubblr bubblr) {
 
