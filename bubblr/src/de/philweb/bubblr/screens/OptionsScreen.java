@@ -100,7 +100,7 @@ public class OptionsScreen extends Screen {
 		languages.add("en_UK");
 		languages.add("de_DE");
 		languages.add("pl_PL");
-//		languages.add("es_ES");
+		languages.add("es_ES");
 //		languages.add("fr_FR");
 		
 		
@@ -164,9 +164,11 @@ public class OptionsScreen extends Screen {
 				bubblr.prefs.setLanguage(languages.get(languageCounter));	// save to prefs
 				
     			if (bubblr.lang.getLanguage().equals("en_UK")) Assets.font = Assets.font10_en;
-    			if (bubblr.lang.getLanguage().equals("de_DE")) Assets.font = Assets.font10_en; //font10_de;
-    			if (bubblr.lang.getLanguage().equals("pl_PL")) Assets.font = Assets.font10_en; //font10_pl;
-				
+    			if (bubblr.lang.getLanguage().equals("de_DE")) Assets.font = Assets.font10_de;
+    			if (bubblr.lang.getLanguage().equals("pl_PL")) Assets.font = Assets.font10_pl;
+    			if (bubblr.lang.getLanguage().equals("es_ES")) Assets.font = Assets.font10_es; 
+    			
+    			
 				Gdx.app.log("bubblr.lang.getLanguage()", "" + bubblr.lang.getLanguage());
 				return;
 			}

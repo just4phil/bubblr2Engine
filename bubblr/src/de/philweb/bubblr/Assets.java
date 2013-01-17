@@ -69,24 +69,18 @@ public class Assets {
 	//===================================================
 	
 
-	
-	public static BitmapFont font10_de;
-	public static BitmapFont font12_de;
-	public static BitmapFont font15_de;
-	public static BitmapFont font17_de;
-	public static BitmapFont font20_de;
-	
 	public static BitmapFont font10_en;
 	public static BitmapFont font12_en;
 	public static BitmapFont font15_en;
 	public static BitmapFont font17_en;
 	public static BitmapFont font20_en;
 	
+	public static BitmapFont font10_de;
+	
 	public static BitmapFont font10_pl;
-	public static BitmapFont font12_pl;
-	public static BitmapFont font15_pl;
-	public static BitmapFont font17_pl;
-	public static BitmapFont font20_pl;
+	
+	public static BitmapFont font10_es;
+
 	
 	
 	
@@ -206,27 +200,39 @@ public class Assets {
 		int screenHeight = Gdx.graphics.getHeight();
 		int fontSize = 20;
 		
-		if (screenWidth >= 600)		fontSize = 20;
-		if (screenWidth >= 800) 	fontSize = 24;
+		if (screenWidth >= 600)		fontSize = 26;
+		if (screenWidth >= 800) 	fontSize = 26;
 		if (screenWidth >= 1280) 	fontSize = 26;
 			
 		
-		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ltromatic.ttf"));
+		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ARIAL.TTF"));
 		font10_en = generator.generateFont(fontSize);
 
-		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ltromatic.ttf"));
-		font12_en = generator.generateFont(Math.round(fontSize / 1.2f));
+//		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ltromatic.ttf"));
+//		font12_en = generator.generateFont(Math.round(fontSize / 1.2f));
+//		
+//		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ltromatic.ttf"));
+//		font15_en = generator.generateFont(Math.round(fontSize / 1.5f));
+//		
+//		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ltromatic.ttf"));
+//		font17_en = generator.generateFont(Math.round(fontSize / 1.7f));
+//		
+//		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ltromatic.ttf"));
+//		font20_en = generator.generateFont(Math.round(fontSize / 2f));
+
 		
-		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ltromatic.ttf"));
-		font15_en = generator.generateFont(Math.round(fontSize / 1.5f));
 		
-		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ltromatic.ttf"));
-		font17_en = generator.generateFont(Math.round(fontSize / 1.7f));
+		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ARIAL.TTF"));
+		font10_de = generator.generateFont(fontSize);
+
+		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ARIAL.TTF"));
+		font10_pl = generator.generateFont(fontSize);
 		
-		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ltromatic.ttf"));
-		font20_en = generator.generateFont(Math.round(fontSize / 2f));
+		generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ARIAL.TTF"));
+		font10_es = generator.generateFont(fontSize);
 		
 		
+		//---------------------------------------------------------------------------------
 		
 		
 //			generator = new FreeTypeFontGenerator(Gdx.files.internal("data/ARIAL.TTF"));

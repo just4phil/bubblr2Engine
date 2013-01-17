@@ -1,5 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <languages>
+	
 	<!-- English -->
 	<language name="en_UK" >
 		<!--  Menu  -->
@@ -91,15 +92,13 @@
 		<string key="Please buy the full version!" value="Please buy the full version!" />
 		<string key="Play the Campaign to unlock levels!" value="Play the Campaign to unlock levels!" />
 		<string key="Press PLAY to start" value="Press PLAY to start" />
-		<string key="Loading level... please wait..." value="Loading level... please wait..." />
 
-		
-		
+
       	<!--  ContactScreen  -->
       	<string key="share ..." value="share ..." />
       	<string key="email to us ..." value="email to us ..." />
       	<string key="apps by us ..." value="apps by us ..." />
-      	<string key="App Store (rate!)" value="rate (store)" />
+      	<string key="App Store (rate!)" value="App Store (rate!)" />
       	<string key="Website" value="Website" />
       	
      
@@ -290,6 +289,7 @@
 	
 	<!-- German -->
 	<language name="de_DE" >
+	
 		<!--  Menu  -->
 	  	<string key="play" value="spielen" />
 	  	<string key="buy full" value="kaufen" />
@@ -307,7 +307,7 @@
       	<string key="particles" value="Partikel" />
       	<string key="lights" value="lichter" />
       	<string key="vibration" value="Vibration" />
-      	<string key="rude mode" value="obszön" />
+      	<string key="rude mode" value="obszoen" />
       	<string key="restore data" value="Daten laden" />
       	<string key="language" value="Deutsch" />
       	<string key="sounds" value="Sounds" />
@@ -379,14 +379,13 @@
       	<string key="Please buy the full version!" value="Bitte kaufe die Voll-Version!" />
 		<string key="Play the Campaign to unlock levels!" value="Spiel die Kampagne, um Level freizuschalten!" />
 		<string key="Press PLAY to start" value="Druecke PLAY zum Starten" />
-		<string key="Loading level... please wait..." value="Lade Level... bitte warten..." />
 		
 		
       	<!--  ContactScreen  -->
       	<string key="share ..." value="empfehlen ..." />
       	<string key="email to us ..." value="email an uns ..." />
       	<string key="apps by us ..." value="apps von uns ..." />
-      	<string key="App Store (rate!)" value="bewerten (store)" />
+      	<string key="App Store (rate!)" value="App Store (bewerten)" />
       	<string key="Website" value="Webseite" />
       	
       	<!--  Share  -->
@@ -574,10 +573,295 @@
 		<string key="try to 'kiss' monsters (kill on extreme short distance)" value="versuche Monster zu 'kuessen' (kill auf sehr kurze Distanz)" />
       	
    </language>
-   
-   
+    
+	
+	<!-- Spanish -->
+	<language name="es_ES" >
 
-	<!-- polish -->
+	<!--  Menu  -->
+	<string key="play" value="jugar" />
+	<string key="buy full" value="comprar" />
+      	<string key="scores" value="puntuaciones" />
+      	<string key="rank" value="rango" />
+      	<string key="help" value="ayuda" />
+      	<string key="hints" value="pistas" />
+      	<string key="credits" value="créditos" />
+      	<string key="contact" value="contacto" />
+      	<string key="options" value="opciones" />
+      	<string key="GEIST" value="GEIST" />
+
+      	<!--  Options  -->
+      	<string key="points" value="puntos" />
+      	<string key="particles" value="partículas" />
+      	<string key="lights" value="luces" />
+      	<string key="vibration" value="vibración" />
+      	<string key="rude mode" value="lenguaje soez" />
+      	<string key="restore data" value="restaurar datos" />
+      	<string key="language" value="español" />
+      	<string key="sounds" value="sonido" />
+      	<string key="music" value="música" />
+      	
+      	
+      	<!--  Help  -->
+      	<string key="you are here" value="estás aquí" />
+      	<string key="tilt your phone to walk and run" value="inclina tu teléfono para andar y correr" />
+      	<string key="Fire" value="Disparo" />
+      	<string key="Jump" value="Salto" />
+      	<string key="high" value="alto" />
+      	<string key="low" value="bajo" />
+      	<string key="These little suckers are bad" value="Estos pequeños cabrones son malos" />
+      	<string key="you may call them 'monsters'" value="los podrías llamar 'monstruos'" />
+      	<string key="always remember to kick their asses!" value="¡recuerda siempre patearles el culo!" />
+      	<string key="This is your mission" value="Esta es tu misión" />
+      	<string key="it is strongly recommended that you fulfill all missions" value="se recomienda encarecidamente que completes todas las misiones" />
+      	<string key="suicide" value="suicido" />
+      	<string key="dont use that until you are stuck somewhere!" value="¡no lo uses hasta que te quedes atascado!" />
+      	<string key="use laser killswitch" value="usa láser de emergencia" /> <!-- infinitive or order? -->
+      	<string key="only if you got one or minimum points:" value="osólo si llegas al mínimo de puntos:" />
+      	<string key="throw weapon away" value="tirar arma" />
+      	<string key="only available for special weapons" value="sólo disponible para armas especiales" />
+      	<string key="Level name and no." value="Nombre y número del nivel" />
+      	<string key="Level time and time limit" value="Tiempo y límite del nivel" />
+      	<string key="5 lifes" value="5 vidas" />
+      	<string key="how often you 'kissed a monster'" value="frecuencia con la que has 'besado a un monstruo'" /> <!-- frequency or number of times? -->
+      	<string key="how often you had a kill-'hattrick'" value="frecuencia con la que has hecho un 'hattrick'" />
+      	<string key="your score" value="tu puntuación" />
+      	<string key="play and pause" value="jugar y pausa" />
+      	<string key="sound on / off" value="sonido on/off" />
+      	<string key="music on / off" value="música on / off" />
+      	<string key="back to menu / quit" value="volver al menú / salir" />
+	<string key="after bubbling a monster" value="tras un monstruo burbujeante" /> <!-- bubbling as in bubble? -->
+	<string key="jump against the bubbles to kill it" value="salta sobre las burbujas para matarlas" />
+	<string key="or fire with cannons and fireballs" value="o dispara con cañones y bolas de fuego" />
+	<string key="neccessary items may fall on unreachable areas" value="objetos necesarios pueden caer en áreas inaccesibles" />
+	<string key="that is bad luck" value="eso es mala suerte" />
+	<string key="you will have to start over" value="tendrás que empezar de nuevo" />
+	<string key="P.S.: a hattrick means to kill more than one monster in a single jump" value="P.D.: un hattrick significa matar más de un monstruo de un sólo salto" />
+	<string key="diamond" value="diamante" />
+	<string key="time bonus per sec." value="tiempo bonus por segundo" />
+	<string key="strawberry" value="fresa" />
+	<string key="banana" value="banana" />
+	<string key="berry" value="cereza" />
+	<string key="coin" value="moneda" />
+	<string key="specials (bigger)" value="especiales (más grande)" /> <!-- is bigger plural? -->
+	<string key="level exit" value="salida" />
+	<string key="fireball" value="bola de fuego" />
+	<string key="mine" value="mina" />
+
+
+      	<!--  Toasts  -->
+      	<string key="Please log into SWARM by clicking" value="Por favor, inicia sesión en SWARM haciendo click" />
+      	<string key="SCORES/RANKS" value="PUNTUACIONES/RÁNKING" />
+      	<string key="Points have been disabled." value="Los puntos han sido desactivados." />
+      	<string key="Points have been enabled." value="Los puntos han sido activados." />
+      	<string key="Particle FX have been disabled." value="Los efectos de partículas han sido desactivados." />
+      	<string key="Particle FX have been enabled." value="Los efectos de partículas han sido activados." />
+      	<string key="Light FX have been disabled." value="Los efectos de luz han sido desactivados." />
+      	<string key="Light FX have been enabled." value="Los efectos de luz han sido activados." />
+      	<string key="Vibration has been disabled." value="La vibración ha sido desactivada." />
+      	<string key="Vibration has been enabled." value="La vibración ha sido activada." />
+      	<string key="Rude Mode has been disabled." value="El lenguaje soez ha sido desactivado." />
+      	<string key="Rude Mode has been enabled." value="El lenguaje soez ha sido activado." />
+      	<string key="This option is not implemented yet." value="Esta opción aún no ha sido implementada." />
+      	<string key="Please wait a second!" value="¡Espera un momento!" />
+	<string key="Please buy the full version!" value="¡Compra la versión completa, por favor!" />
+	<string key="Play the Campaign to unlock levels!" value="¡Juega el modo campaña para desactivar niveles!" />
+	<string key="Press PLAY to start" value="Pulsa JUGAR para empezar" />
+
+
+      	<!--  ContactScreen  -->
+      	<string key="share ..." value="compartir..." />
+      	<string key="email to us ..." value="envíanos un e-mail..." />
+      	<string key="apps by us ..." value="nuestra apps..." />
+      	<string key="App Store (rate!)" value="¡Puntúa nuestra App!" />
+      	<string key="Website" value="Página web" />
+      	
+     
+      	<!--  Share  -->
+      	<string key="Would you like to share your score?" value="¿Quieres compartir tu puntuación?" />
+      	<string key="share your bubblr-SCORE with ..." value="comparte tu puntuación con..." />
+      	<string key="i just played bubblr" value="acabo de jugar a bubblr" />
+      	<string key="i just played bubblr and got" value="acabo de jugar a bubblr y he conseguido" />
+      	<string key="points. can you get more???? -> Get yourself a copy" value="puntos. ¿puedes conseguir más? -> Consigue tu copia" />
+      	<string key="recommend BUBBLR to your friends..." value="recomienda BUBBLR a tus amigos..." />
+      	<string key="bubblr kicks ass!! get yourself a copy and join in" value="¡¡bubblr mola!! consigue tu copia y unéte" />
+     
+      	
+      	<!--  AppRater  -->
+      	<string key="Please rate bubblr!" value="¡Puntúa bubblr por favor!" />
+      	<string key="It seems that you like bubblr?" value="¡Parece que te gusta bubblr!" />
+      	<string key="Please take a second to rate bubblr on the market." value="Por favor, tómate un momento para puntuar bubblr." />
+      	<string key="Thanks for your support!" value="¡Gracias por tu apoyo!" />
+      	<string key="later" value="más tarde" />
+      	<string key="Never" value="nunca" />
+      	<string key="Rate bubblr!" value="¡Puntúa bubblr!" />
+
+
+	<!--  RestoreScree  -->
+	<string key="ATTENTION!" value="¡ATENCIÓN!" />
+	<string key="RESTORE will delete your local saved game and restore your online data." value="RESTAURAR borrará tus partida guardada y tus datos online." />
+	<string key="Are you sure?" value="¿Estás seguro?" />
+	<string key="PREVIEW" value="previsualizar" />
+	<string key="local" value="local" />
+	<string key="restore" value="restaurar" />
+	<string key="Lifes" value="Vidas" />
+	<string key="Hattrick" value="Hattrick" />
+	<string key="Monster-Kisses" value="Besos monstruo" />
+	<string key="Laser-Counter" value="Contador láser" />
+	<string key="request cloud-data" value="solicitar datos en la nube" />
+	<string key="receiving cloud-data. please wait." value="recibiendo datos de la nube. por favor espera." />
+	<string key="REFRESH" value="ACTUALIZAR" />
+	<string key="Cloud-data have been imported to the local preferences." value="Los datos de la nube se han importado a las preferencias locales." />
+	<string key="Unlocked Level" value="Nivel desbloqueado" />
+
+
+	<!--  EULA  -->
+	<string key="bubblr Enduser Licence Agreement" value="Licencia de usuario de bubblr" />
+	<string key="Latest Updates" value="Últimas actualizaciones" />
+	<string key="first beta release" value="primera versión beta" />
+	<string key="bubblr is in beta-Stadium and may still have bugs. No Warranty! Copyright by Heavily Loaded Games. Reverse Engineering, Decompilation and Disassembly is prohibited." value="bubblr es una versión beta y puede contener bugs. ¡No hay garantías! Copyright de Heeavily Loaded Games. Ingeniería inversa, descompilar y desensamblar queda prohibido." />
+		
+
+      	<!--  PlayMenu  -->
+      	<string key="continue" value="continuar" />
+      	<string key="not available" value="no disponible" />
+      	<string key="next level" value="siguiente nivel" />
+      	<string key="new campaign" value="nueva campaña" />
+      	<string key="select level" value="seleccionar nivel" />
+      	
+      	<!--  GameScreen  -->
+      	<string key="Level" value="Nivel" />
+      	<string key="Time" value="Tiempo" />
+      	<string key="limit" value="límite" />
+      	<string key="SCORE" value="PUNTUACIÓN" />
+     	<string key="Kisses" value="Besos" />
+      	<string key="Hattricks" value="Hattricks" />
+      	<string key="TimeLimit" value="Límite de tiempo" />
+      	<string key="Map Time Limit" value="Límite de tiempo del mapa" />
+      	<string key="Used Time" value="Tiempo" />
+      	<string key="seconds" value="segundos" />
+      	<string key="Bonus-Points" value="Puntos bonus" />
+      	<string key="Penalty-Points" value="Puntos de penalización" />
+      	<string key="none" value="ninguno" />
+	<string key="Proceed" value="Proceder" />
+	<string key="great ..." value="genial ..." />
+	<string key="... you finished stage" value="... terminaste el nivel" />
+	<string key="Prepare for stage" value="Prepárate para el nivel" />
+	<string key="choose another level..." value="elije otro nivel..." />
+	<string key="next" value="siguiente" />
+	<string key="retry" value="reintentar" />
+	<string key="back" value="atrás" />
+	<string key="select" value="seleccionar" />
+	<string key="Game Over at level" value="Game Over en el nivel" />
+	<string key="Give it a nother try!" value="¡Inténtalo de nuevo!" />
+	<string key="Congratulations" value="Enhorabuena" />
+	<string key="You finished the game" value="Completaste el juego" />
+      	<string key="Thanks for playing the bubblr DEMO!" value="¡Gracias por jugar a la DEMO de bubblr!" />
+      	<string key="Would you like to buy the full version?" value="¿Querrías comprar la versión completa?" />
+      	<string key="Upload your Highscore!" value="¡Sube tu puntuación!" />
+      	<string key="Log in to Swarm to upload your highscore! Otherwise you will loose it!" value="¡Inicia sesión en Swarm para subir tu puntuación! ¡Si no, la perderás!" />
+      	<string key="Waiting for GEIST to finisch rocking ... (or press PLAY)" value="Esperando a GEIST para dejar de petarlo... (o pulsa PLAY)" />
+      	
+
+      	<!--  Welt  -->
+      	<string key="MonsterKISS!" value="MonsterKISS!" />
+      	<string key="Hurry up! Limited Fireballs!" value="¡Date prisa! ¡Las bolas de fuego son limitadas!" />
+      	<string key="Damn! that was close!" value="¡Mierda, eso estuvo cerca!" />
+      	<string key="+ 1 life" value="+1 vida" />
+      	<string key="SuperJump" value="SuperSalto" />
+      	<string key="SuperSpeed" value="SuperVelocidad" />
+      	<string key="Immortal" value="Inmortal" />
+      	<string key="Release the dogs! HURRY UP!" value="¡Suelta a los perros! ¡DATE PRISA!" />
+      	
+      	<!--  Welt  - Weapons -->
+      	<string key="Yeah! I can bubble!" value="¡Sí! ¡Puedo bubblear!" />
+      	<string key="Shit! I lost my weapon!" value="¡Mierda! ¡He perdido mi arma!" />
+      	<string key="Yeah! I got FIREBALLS!" value="¡Yeah! ¡Tengo bolas de FUEGOOOO!" />
+      	<string key="Yeah! Got a laser!" value="¡Yeah! ¡Tengo un láser!" />
+      	
+      	<!--  Dialogs  -->
+      	<string key="This is not implemented at the moment (coming soon)!" value="No implementado por el momento (¡pronto!)" />
+      	<string key="bubblr FULL Version is coming soon!" value="La versión COMPLETA de bubblr saldrá pronto" />
+      	<string key="Mission not accomplished!" value="¡Misión no cumplida!" />
+      	<string key="You didnt fullfill the mission! Sometimes it is necessary to do so! If you go to the next level, you cant go back and maybe have to start over!" value="¡No completaste la misión! ¡A veces es necesario hacerlo! Si vas al siguiente nivel no podrás volver y quizás tendrás que empezar de nuevo!" />
+	<string key="Enable Highscores and Ranking?" value="¿Activar las puntuaciones más altas y el ránking?" />
+	<string key="Get achievements and compare your highscores with other players! Click 'YES' to enable highscores and ranking!" value="¡Desbloquea logros y compara tus puntuaciones con las de otros jugadores! ¡Pulsa 'SÍ' para activar las puntuaciones y el ránking!" />
+	<string key="YES" value="SÍ" />
+	<string key="NO" value="NO" />
+	<string key="OK" value="OK" />
+	<string key="CANCEL" value="CANCELAR" />
+	<string key="Disable Rude Mode?" value="¿Desactiva el lenguaje soez?" />
+	<string key="Are you less than 18 years old or do you feel uncomfortable by rude language?" value="¿Eres menor de edad o te sientes incómodo con el lenguaje soez?" />
+	<string key="Exit?" value="¿Salir?" />
+	<string key="Do you really want to exit?" value="¿De verdad quieres salir?" />
+		
+
+      	<!--  Map Names  -->
+      	<string key="The Jump" value="El Salto" />
+      	<string key="Platforms of death" value="Plataformas de la muerte" />
+      	
+      	<string key="Tutorial 1 - jump around" value="Tutorial 1 - salta" />
+      	<string key="Tutorial 2 - monster" value="Tutorial 2 - monstruo" />
+      	<string key="Tutorial 3 - floating plattforms" value="Tutorial 3 - plataformas flotantes" />
+      	<string key="Tutorial 4 - Cannon" value="Tutorial 4 - Cañón" />
+      	<string key="Tutorial 5 - Ghosts and Fireballs" value="Tutorial 5 - Fantasmas y bolas de fuego" />
+      	<string key="Tutorial 6 - hattrick" value="Tutorial 6 - hattrick" />
+      	<string key="Release The Dogs!" value="¡Suelta a los perros!" />
+      	<string key="Exit" value="Salir" />
+      	<string key="Ghost ride" value="Viaje fantasmal" />
+      	<string key="Tricky Cannon" value="Cañón complicado" />
+      	<string key="the speed" value="la velocidad" />
+      	<string key="Phils Revenge" value="La venganza de Phils" />
+      	<string key="The Survival" value="Supervivencia" />
+      	<string key="Catch em" value="Atrápalos" />
+      	<string key="the tunnel" value="el túnel" />
+	<string key="MineField" value="Campo de minas" />
+	<string key="The Rage" value="La furia" />
+	<string key="cannon valley" value="valle del cañón" />
+	<string key="hard times" value="tiempos duros" />
+      	<string key="Tower of defense" value="Torre de defensa" />
+      	
+      	
+      	<!--  Map Toasts / Missions  -->
+      	<string key="Tutorial 1 - jump around, make bubbles and enter the exit" value="Tutorial 1 - inclina tu dispositivo para moverte, salta, haz burbujas y llega a la salida en la esquina superior derecha" />
+      	<string key="Tutorial 2 - now it´s time to bubble a monster" value="Tutorial 2 - es hora de burbujear a un monstruo" />
+      	<string key="Tutorial 3 - take the floating plattforms and enter the exit before the timelimit expires" value="Tutorial 3 - utiliza las plataformas flotantes antes de que el límite de tiempo se cumpla" />
+      	<string key="Tutorial 4 - shoot your way to the exit" value="Tutorial 4 - dispara para alcanzar la salida" />
+      	<string key="Tutorial 5 - Ghosts will be redirected by bubbles and killed by fireballs" value="Tutorial 5 - Las burbujas desviarán a los fantasmas y las bolas de fuego los matarán" />
+      	<string key="Tutorial 6 - try to make a hattrick by hitting multiple bubbled monsters with a single jump" value="Tutorial 6 - consigue un hattrick golpeando a varios monstruos burbujeados con un salto" />
+      	<string key="make a 2-kill-hattrick!" value="¡haz un hattrick de 2 muertes!" />
+      	<string key="make a 3-kill-hattrick!" value="¡haz un hattrick de 3 muertes!" />
+      	<string key="make a 4-kill-hattrick!" value="¡haz un hattrick de 4 muertes!" />
+      	<string key="make a 5-kill-hattrick!" value="¡haz un hattrick de 5 muertes!" />
+      	<string key="ghosts don´t like bubbles" value="a los fantasmas no les gustan las burbujas" />
+      	<string key="be fast" value="sé rápido" />
+      	<string key="Now have fun with bubblr :) Be carefull with the TimeLimit!" value="Diviértete con bubblr :) ¡Ten cuidado de no superar el límite de tiempo!" />
+      	<string key="creative shooting is needed" value="se necesitan disparos creativos" />
+      	<string key="Dont be too fast!" value="¡No seas demasiado rápido!" />
+      	<string key="Dont fall!" value="¡No te caigas!" />
+	<string key="find the slot" value="encuentra el hueco" />
+	<string key="Don´t forget to make hattricks" value="No te olvides de hacer hattricks" />
+	<string key="be carefull!" value="¡ten cuidado!" />
+
+      	
+      	<!--  Hints  -->
+      	<string key="dont get killed ;)" value="no dejes que te maten ;)" />
+      	<string key="beware for monsters coming from underneath" value="ten cuidado con los monstruos de abajo" />
+      	<string key="beware for monsters escaping out of bubbles (they are getting faster)" value="ten cuidado con los monstruos que se escapan de las burbujas (se vuelven más rápidos)" />
+      	<string key="dont step on grenades" value="no pises granadas" />
+      	<string key="sometimes you'll have to kill all the monsters to finish the level." value="a veces necesitarás eliminar a todos los monstruos para acabar el nivel." />
+	<string key="sometimes it's enough to enter the exit" value="a veces basta con cruzar la salida" />
+	<string key="sometimes you'll need a special weapon to blast away barriers that block the exit" value="a veces necesitarás un arma especial para destruir barreras que bloquean la salida" />
+	<string key="try to be quick" value="intenta ser rápido" />
+	<string key="try to kill multiple monsters with one jump ( > 1 = hattrick )" value="intenta eliminar más de un monstruo con un salto para conseguir un hattrick" />
+	<string key="try to make bubbles before your last kill" value="intenta hacer burbujas antes de tu última muerte" />
+	<string key="try to make bubbles before you enter the exit" value="intenta hacer burbujas antes de cruzar la salida" />
+	<string key="try to 'kiss' monsters (kill on extreme short distance)" value="intenta 'besar' monstruos (matarlos muy de cerca)" />
+				
+	</language>
+  
+  
+	<!-- Polish -->
 	<language name="pl_PL" >
 
 	<!--  Menu  -->
@@ -863,13 +1147,5 @@
 				
 	</language>
 	
-
    
 </languages>
-
-
- 
-
-
-
-
