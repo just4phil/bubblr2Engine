@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="26" tilewidth="18" tileheight="18">
+ <properties>
+  <property name="mapName" value="Catch em"/>
+  <property name="mapSpecialCollectable" value="fireball"/>
+  <property name="mapSpecialCondition" value="hattrick3"/>
+  <property name="mapTimeLimit" value="45"/>
+  <property name="mapToast" value="make a 3-kill-hattrick!"/>
+  <property name="monsterSpeed" value="1.7"/>
+ </properties>
+ <tileset firstgid="1" name="level.png" tilewidth="18" tileheight="18" spacing="2">
+  <image source="level.png" width="64" height="512"/>
+ </tileset>
+ <layer name="Kachelebene 1" width="32" height="26">
+  <data encoding="base64" compression="zlib">
+   eJyTZ2BgkAFiFjpjeai9YkAsCcScQMxGRwyzF+YOdgb6AnT/09v+keR/cTTMwDC4/Y/uXnEM3agAm3pCegaz/+kBRv1Puv/JSWe4AK39T8it6P5HV8dLZfegA0L1HweN7Sc2/qkR19jAUEz/2AC5+WGw+R+bP6iZB9DNJqb9R8s8MFr+Dy7/07v/AbMXABCnEaI=
+  </data>
+ </layer>
+ <objectgroup color="#ff55ff" name="monster" width="32" height="32">
+  <object name="benzo" x="117" y="90" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+  <object name="benzo" x="237" y="178" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+  <object name="benzo" x="348" y="87" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+  <object name="benzo" x="468" y="52" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+  <object name="benzo" x="434" y="193" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+  <object name="benzo" x="56" y="212" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#5500ff" name="player" width="32" height="32">
+  <object name="player1" x="72" y="406" width="32" height="32"/>
+  <object name="player2" x="588" y="373" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#55ff00" name="exit" width="32" height="26">
+  <object name="exit1" x="488" y="405" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ffff7f" name="spawnpoints_reload" width="32" height="26" visible="0">
+  <object x="57" y="323" width="32" height="32"/>
+  <object x="306" y="55" width="32" height="32"/>
+  <object x="506" y="325" width="32" height="32"/>
+  <object x="326" y="143" width="32" height="32"/>
+  <object x="290" y="414" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="spawnpoints_monster" width="32" height="26">
+  <object x="156" y="17" width="32" height="32"/>
+  <object x="312" y="17" width="32" height="32"/>
+  <object x="505" y="18" width="32" height="32"/>
+  <object x="429" y="17" width="32" height="32"/>
+  <object x="273" y="17" width="32" height="32"/>
+  <object x="77" y="16" width="32" height="32"/>
+  <object x="38" y="17" width="32" height="32"/>
+  <object x="352" y="17" width="32" height="32"/>
+  <object x="194" y="17" width="32" height="32"/>
+  <object x="117" y="17" width="32" height="32"/>
+  <object x="467" y="16" width="32" height="32"/>
+  <object x="393" y="17" width="32" height="32"/>
+  <object x="233" y="18" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#aaaaff" name="barriers" width="32" height="26">
+  <object name="eisblock" x="435" y="434" width="14" height="14"/>
+  <object name="eisblock" x="441" y="416" width="14" height="14"/>
+  <object name="eisblock" x="445" y="397" width="14" height="14"/>
+  <object name="eisblock" x="451" y="380" width="14" height="14"/>
+  <object name="eisblock" x="432" y="369" width="14" height="14"/>
+  <object name="eisblock" x="429" y="385" width="14" height="14"/>
+  <object name="eisblock" x="423" y="400" width="14" height="14"/>
+  <object name="eisblock" x="417" y="416" width="14" height="14"/>
+  <object name="eisblock" x="413" y="433" width="14" height="14"/>
+  <object name="eisblock" x="451" y="380" width="14" height="14"/>
+  <object name="eisblock" x="450" y="365" width="14" height="14"/>
+  <object name="eisblock" x="468" y="364" width="14" height="14"/>
+  <object name="eisblock" x="486" y="364" width="14" height="14"/>
+  <object name="eisblock" x="504" y="364" width="14" height="14"/>
+  <object name="eisblock" x="522" y="364" width="14" height="14"/>
+  <object name="eisblock" x="467" y="378" width="14" height="14"/>
+  <object name="eisblock" x="484" y="375" width="14" height="14"/>
+  <object name="eisblock" x="502" y="375" width="14" height="14"/>
+  <object name="eisblock" x="520" y="375" width="14" height="14"/>
+  <object name="eisblock" x="414" y="450" width="14" height="14"/>
+  <object name="eisblock" x="432" y="450" width="14" height="14"/>
+  <object name="eisblock" x="450" y="450" width="14" height="14"/>
+  <object name="eisblock" x="468" y="450" width="14" height="14"/>
+  <object name="eisblock" x="486" y="450" width="14" height="14"/>
+  <object name="eisblock" x="504" y="450" width="14" height="14"/>
+  <object name="eisblock" x="522" y="450" width="14" height="14"/>
+  <object name="eisblock" x="540" y="450" width="14" height="14"/>
+  <object name="eisblock" x="540" y="432" width="14" height="14"/>
+  <object name="eisblock" x="540" y="414" width="14" height="14"/>
+  <object name="eisblock" x="540" y="396" width="14" height="14"/>
+  <object name="eisblock" x="540" y="378" width="14" height="14"/>
+  <object name="eisblock" x="540" y="364" width="14" height="14"/>
+ </objectgroup>
+ <objectgroup name="cannons" width="32" height="26"/>
+ <objectgroup name="floatingPlattforms" width="32" height="26"/>
+</map>

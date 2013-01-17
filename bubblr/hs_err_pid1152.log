@@ -1,0 +1,189 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000077090895, pid=1152, tid=4788
+#
+# JRE version: 7.0_02-b13
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (22.0-b10 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [ntdll.dll+0x50895]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000023df000):  JavaThread "main" [_thread_in_Java, id=4788, stack(0x00000000027e0000,0x00000000028e0000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xffffffffffffffff
+
+Registers:
+RAX=0x00000000028de6e8, RBX=0x0000000000000002, RCX=0x00000000028de7b8, RDX=0x00000000028de728
+RSP=0x00000000028de6d8, RBP=0x000007feee210680, RSI=0x0000000000000020, RDI=0x0000000000000000
+R8 =0x00000000028d4000, R9 =0x0000000000000003, R10=0x0000000000000000, R11=0x0000000000001fef
+R12=0x0000000000000000, R13=0x0000000000000050, R14=0x0000000000000003, R15=0x00000000023df000
+RIP=0x0000000077090895, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x00000000028de6d8)
+0x00000000028de6d8:   0000000000000202 000000007704b239
+0x00000000028de6e8:   000007fffffdc000 00000000028de840
+0x00000000028de6f8:   00000000023df000 0000000000000510
+0x00000000028de708:   000000006dfacad2 0000000008170b30
+0x00000000028de718:   0000000000000000 0000000000000000
+0x00000000028de728:   00000000028e0000 00000000028d4000
+0x00000000028de738:   000000006df9badb 0000000008170b30
+0x00000000028de748:   000000073b129688 0000000000000051
+0x00000000028de758:   0000000008070f28 00000000028de900
+0x00000000028de768:   0000000000000000 00000000028de950
+0x00000000028de778:   0000000000000000 000000006dfc1561
+0x00000000028de788:   000000000851e520 0000000000000003
+0x00000000028de798:   0000eada22fda5d0 00000000028defb0
+0x00000000028de7a8:   00000000023dbe80 000000006dfc1aab
+0x00000000028de7b8:   00000000028de918 0000000000000000
+0x00000000028de7c8:   00000000028defb0 00000000028df050 
+
+Instructions: (pc=0x0000000077090895)
+0x0000000077090875:   d0 00 00 00 4c 89 a1 d8 00 00 00 4c 89 a9 e0 00
+0x0000000077090885:   00 00 4c 89 b1 e8 00 00 00 4c 89 b9 f0 00 00 00
+0x0000000077090895:   0f ae 81 00 01 00 00 0f 29 81 a0 01 00 00 0f 29
+0x00000000770908a5:   89 b0 01 00 00 0f 29 91 c0 01 00 00 0f 29 99 d0 
+
+
+Register to memory mapping:
+
+RAX=0x00000000028de6e8 is pointing into the stack for thread: 0x00000000023df000
+RBX=0x0000000000000002 is an unknown value
+RCX=0x00000000028de7b8 is pointing into the stack for thread: 0x00000000023df000
+RDX=0x00000000028de728 is pointing into the stack for thread: 0x00000000023df000
+RSP=0x00000000028de6d8 is pointing into the stack for thread: 0x00000000023df000
+RBP=0x000007feee210680 is an unknown value
+RSI=0x0000000000000020 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x00000000028d4000 is pointing into the stack for thread: 0x00000000023df000
+R9 =0x0000000000000003 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000001fef is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000000000050 is an unknown value
+R14=0x0000000000000003 is an unknown value
+R15=0x00000000023df000 is a thread
+
+
+Stack: [0x00000000027e0000,0x00000000028e0000],  sp=0x00000000028de6d8,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ntdll.dll+0x50895]  RtlCaptureContext+0x85
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+v  blob 0x00000000029174ff
+j  sun.security.provider.DigestBase.engineUpdate(B)V+4
+j  java.security.MessageDigest$Delegate.engineUpdate(B)V+5
+j  java.security.MessageDigest.update(B)V+2
+j  com.badlogic.gdx.tools.imagepacker.ImageProcessor.hash(Ljava/awt/image/BufferedImage;)Ljava/lang/String;+108
+j  com.badlogic.gdx.tools.imagepacker.ImageProcessor.addImage(Ljava/io/File;)V+424
+j  com.badlogic.gdx.tools.imagepacker.TexturePacker2.addImage(Ljava/io/File;)V+5
+j  com.badlogic.gdx.tools.imagepacker.TexturePackerFileProcessor.processDir(Lcom/badlogic/gdx/tools/FileProcessor$Entry;Ljava/util/ArrayList;)V+200
+j  com.badlogic.gdx.tools.FileProcessor.process([Ljava/io/File;Ljava/io/File;)Ljava/util/ArrayList;+269
+j  com.badlogic.gdx.tools.imagepacker.TexturePackerFileProcessor.process([Ljava/io/File;Ljava/io/File;)Ljava/util/ArrayList;+114
+j  com.badlogic.gdx.tools.FileProcessor.process(Ljava/io/File;Ljava/io/File;)Ljava/util/ArrayList;+64
+j  com.badlogic.gdx.tools.imagepacker.TexturePackerFileProcessor.process(Ljava/io/File;Ljava/io/File;)Ljava/util/ArrayList;+8
+j  com.badlogic.gdx.tools.imagepacker.TexturePacker2.process(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V+31
+j  com.badlogic.gdx.tools.imagepacker.TexturePacker2.main([Ljava/lang/String;)V+119
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000008043800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3132, stack(0x0000000008330000,0x0000000008430000)]
+  0x0000000006b8c000 JavaThread "Service Thread" daemon [_thread_blocked, id=3832, stack(0x0000000007a70000,0x0000000007b70000)]
+  0x0000000006b8b000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=5008, stack(0x0000000007060000,0x0000000007160000)]
+  0x0000000006b86000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=3636, stack(0x0000000007930000,0x0000000007a30000)]
+  0x0000000006b84000 JavaThread "Attach Listener" daemon [_thread_blocked, id=3288, stack(0x00000000077e0000,0x00000000078e0000)]
+  0x0000000006b79000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4024, stack(0x0000000007600000,0x0000000007700000)]
+  0x0000000006a92000 JavaThread "Finalizer" daemon [_thread_blocked, id=1700, stack(0x0000000007410000,0x0000000007510000)]
+  0x0000000006a89000 JavaThread "Reference Handler" daemon [_thread_blocked, id=3024, stack(0x0000000007230000,0x0000000007330000)]
+=>0x00000000023df000 JavaThread "main" [_thread_in_Java, id=4788, stack(0x00000000027e0000,0x00000000028e0000)]
+
+Other Threads:
+  0x0000000006a79800 VMThread [stack: 0x0000000006f50000,0x0000000007050000] [id=3248]
+  0x0000000006ba5000 WatcherThread [stack: 0x0000000007ce0000,0x0000000007de0000] [id=408]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 57344K, used 2949K [0x00000007c0000000, 0x00000007c4000000, 0x0000000800000000)
+  eden space 49152K, 6% used [0x00000007c0000000,0x00000007c02e1540,0x00000007c3000000)
+  from space 8192K, 0% used [0x00000007c3800000,0x00000007c3800000,0x00000007c4000000)
+  to   space 8192K, 0% used [0x00000007c3000000,0x00000007c3000000,0x00000007c3800000)
+ PSOldGen        total 131072K, used 0K [0x0000000740000000, 0x0000000748000000, 0x00000007c0000000)
+  object space 131072K, 0% used [0x0000000740000000,0x0000000740000000,0x0000000748000000)
+ PSPermGen       total 21248K, used 5945K [0x000000073ae00000, 0x000000073c2c0000, 0x0000000740000000)
+  object space 21248K, 27% used [0x000000073ae00000,0x000000073b3ce698,0x000000073c2c0000)
+
+Code Cache  [0x00000000028e0000, 0x0000000002b50000, 0x00000000058e0000)
+ total_blobs=334 nmethods=18 adapters=269 free_code_cache=48666Kb largest_free_block=49816704
+
+Dynamic libraries:
+0x000000013f760000 - 0x000000013f793000 	C:\Program Files\Java\jre7\bin\javaw.exe
+0x0000000077040000 - 0x00000000771e9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000076dc0000 - 0x0000000076edf000 	C:\Windows\system32\kernel32.dll
+0x000007fefd650000 - 0x000007fefd6bc000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefedc0000 - 0x000007fefee9b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefefc0000 - 0x000007feff05f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefe600000 - 0x000007fefe61f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefeb40000 - 0x000007fefec6d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076ab0000 - 0x0000000076baa000 	C:\Windows\system32\USER32.dll
+0x000007feff2d0000 - 0x000007feff337000 	C:\Windows\system32\GDI32.dll
+0x000007fefedb0000 - 0x000007fefedbe000 	C:\Windows\system32\LPK.dll
+0x000007fefe830000 - 0x000007fefe8f9000 	C:\Windows\system32\USP10.dll
+0x000007fefbf50000 - 0x000007fefc144000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefeea0000 - 0x000007fefef11000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefd370000 - 0x000007fefd3c7000 	C:\Windows\system32\apphelp.dll
+0x000007feedfd0000 - 0x000007feee437000 	C:\Windows\AppPatch\AppPatch64\AcXtrnal.DLL
+0x000007feff060000 - 0x000007feff08e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefea30000 - 0x000007fefeb39000 	C:\Windows\system32\MSCTF.dll
+0x0000000073660000 - 0x0000000073731000 	C:\Program Files\Java\jre7\bin\msvcr100.dll
+0x000000006de00000 - 0x000000006e4da000 	C:\Program Files\Java\jre7\bin\server\jvm.dll
+0x000007fef8e90000 - 0x000007fef8e99000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefe9e0000 - 0x000007fefea2d000 	C:\Windows\system32\WS2_32.dll
+0x000007feff340000 - 0x000007feff348000 	C:\Windows\system32\NSI.dll
+0x000007fefb150000 - 0x000007fefb18b000 	C:\Windows\system32\WINMM.dll
+0x0000000077200000 - 0x0000000077207000 	C:\Windows\system32\PSAPI.DLL
+0x00000000738c0000 - 0x00000000738cf000 	C:\Program Files\Java\jre7\bin\verify.dll
+0x0000000073630000 - 0x0000000073658000 	C:\Program Files\Java\jre7\bin\java.dll
+0x00000000738a0000 - 0x00000000738b5000 	C:\Program Files\Java\jre7\bin\zip.dll
+0x0000000061210000 - 0x00000000613a4000 	C:\Program Files\Java\jre7\bin\awt.dll
+0x000007fefe900000 - 0x000007fefe9d7000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefe620000 - 0x000007fefe823000 	C:\Windows\system32\ole32.dll
+0x000007fefbb90000 - 0x000007fefbba8000 	C:\Windows\system32\DWMAPI.DLL
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: com.badlogic.gdx.tools.imagepacker.TexturePacker2 etc/images ../bubblr-android/assets/data/image-atlases pages
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Symantec\Workspace Virtualization\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\MKVToolNix;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Nmap
+USERNAME=andre
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 16 Model 4 Stepping 3, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 16 model 4 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, popcnt, mmxext, 3dnowpref, lzcnt, sse4a
+
+Memory: 4k page, physical 12581048k(9267464k free), swap 12579196k(8706632k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (22.0-b10) for windows-amd64 JRE (1.7.0_02-b13), built on Nov 17 2011 13:51:15 by "java_re" with unknown MS VC++:1600
+
+time: Sat Jan 05 00:47:09 2013
+elapsed time: 0 seconds
+

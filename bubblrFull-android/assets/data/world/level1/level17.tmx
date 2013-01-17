@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="26" tilewidth="18" tileheight="18">
+ <properties>
+  <property name="RTDEnabled" value="1"/>
+  <property name="RTDTimeLimit" value="20"/>
+  <property name="mapName" value="The Rage"/>
+  <property name="mapSpecialCollFuncDur" value="6000"/>
+  <property name="mapSpecialCollFuncValue" value="0"/>
+  <property name="mapSpecialCollectable" value="fireball"/>
+  <property name="mapSpecialCondition" value="hattrick3"/>
+  <property name="mapSpecialCritical" value=""/>
+  <property name="mapTimeLimit" value="45"/>
+  <property name="mapToast" value="make a 3-kill-hattrick!"/>
+  <property name="monsterSpeed" value="1.9"/>
+ </properties>
+ <tileset firstgid="1" name="level.png" tilewidth="18" tileheight="18" spacing="2">
+  <image source="level.png" width="64" height="512"/>
+ </tileset>
+ <layer name="Kachelebene 1" width="32" height="26">
+  <data encoding="base64" compression="zlib">
+   eJzNl8kKAjEQRHNyQRQGRdTLuPxB/v/j7IMFsektmRhsqIvT9huoShunlNKJ9FS0T9+l9dX2Tx/ukXQgbUkrQRs2b6f01faDeyNdSWtSNoSyenKwJxfcC+kc4EfeIfqOueC+SI8gv2RwTg07F9w7aU52njQ+L4mjzQUXPlj5W8LX8tfif0+1+t9L3P/RfHDhQ2Svef6jrNxB3H8tf1IOOUv6zNuTS/zn7B7nf/T+Abd2/3sV5Uvn38uM9PvKKzpD8t/LjLQPuaIz/u38j+aP2P/JeKad/0h+Wu6FfI9q/kfy03Iv5PkF1/O/Ry3x/1d8cHEPt/JXM1f6nvSM3/9H//8A9w230GOd
+  </data>
+ </layer>
+ <objectgroup color="#ff55ff" name="monster" width="32" height="32">
+  <object name="benzo" x="482" y="51" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="banana"/>
+    <property name="collectableType" value="points"/>
+   </properties>
+  </object>
+  <object name="benzo" x="85" y="140" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="berry"/>
+    <property name="collectableType" value="points"/>
+   </properties>
+  </object>
+  <object name="benzo" x="68" y="52" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="strawberry"/>
+    <property name="collectableType" value="points"/>
+   </properties>
+  </object>
+  <object name="benzo" x="455" y="142" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="coin"/>
+    <property name="collectableType" value="points"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#5500ff" name="player" width="32" height="32">
+  <object name="player1" x="58" y="407" width="32" height="32"/>
+  <object name="player2" x="597" y="401" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#55ff00" name="exit" width="32" height="26"/>
+ <objectgroup color="#ffff7f" name="spawnpoints_reload" width="32" height="26" visible="0">
+  <object x="57" y="323" width="32" height="32"/>
+  <object x="306" y="55" width="32" height="32"/>
+  <object x="506" y="325" width="32" height="32"/>
+  <object x="326" y="143" width="32" height="32"/>
+  <object x="290" y="414" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="spawnpoints_monster" width="32" height="26">
+  <object x="194" y="18" width="32" height="32"/>
+  <object x="233" y="19" width="32" height="32"/>
+  <object x="391" y="18" width="32" height="32"/>
+  <object x="429" y="18" width="32" height="32"/>
+  <object x="272" y="18" width="32" height="32"/>
+  <object x="116" y="18" width="32" height="32"/>
+  <object x="38" y="18" width="32" height="32"/>
+  <object x="467" y="17" width="32" height="32"/>
+  <object x="352" y="18" width="32" height="32"/>
+  <object x="77" y="18" width="32" height="32"/>
+  <object x="312" y="18" width="32" height="32"/>
+  <object x="504" y="19" width="32" height="32"/>
+  <object x="154" y="18" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#aaaaff" name="barriers" width="32" height="26"/>
+ <objectgroup name="collectables" width="32" height="26"/>
+ <objectgroup name="RTDmonster" width="32" height="26">
+  <properties>
+   <property name="monsterRTDnoCount" value="0"/>
+  </properties>
+  <object name="flyer" x="313" y="-69" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="diamond"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterAI" value="flyer"/>
+    <property name="monsterSpeed" value="1"/>
+   </properties>
+  </object>
+  <object name="flyer" x="270" y="-69" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="diamond"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterAI" value="flyer"/>
+    <property name="monsterSpeed" value="1"/>
+   </properties>
+  </object>
+  <object name="flyer" x="229" y="-70" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="diamond"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterAI" value="flyer"/>
+    <property name="monsterSpeed" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

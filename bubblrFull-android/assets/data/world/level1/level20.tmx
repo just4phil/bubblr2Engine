@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="26" tilewidth="18" tileheight="18">
+ <properties>
+  <property name="mapName" value="Tower of defense"/>
+  <property name="mapSpecialCollFuncDur" value="10"/>
+  <property name="mapSpecialCollFuncValue" value="0"/>
+  <property name="mapSpecialCollectable" value="immortal"/>
+  <property name="mapSpecialCondition" value="hattrick2"/>
+  <property name="mapTimeLimit" value="45"/>
+  <property name="mapToast" value="make a 2-kill-hattrick!"/>
+  <property name="monsterSpeed" value="2.0"/>
+ </properties>
+ <tileset firstgid="1" name="level.png" tilewidth="18" tileheight="18" spacing="2">
+  <image source="level.png" width="64" height="512"/>
+ </tileset>
+ <layer name="Kachelebene 1" width="32" height="26">
+  <data encoding="base64" compression="zlib">
+   eJztlzEKACAMAzv4Bosg+P9f6mCHdJYiJAeZ0yNTl5nNk1acdXv7ybB6ojfuqIbN31PY/DNs/tofYfPX/gibv/ZHfvPP+/jjPu2PyB/9q/+P6N1Bpw3k
+  </data>
+ </layer>
+ <objectgroup color="#ff55ff" name="monster" width="32" height="32">
+  <object name="benzo" x="67" y="407" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+  <object name="benzo" x="134" y="407" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+  <object name="benzo" x="203" y="409" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+  <object name="benzo" x="320" y="408" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+  <object name="benzo" x="381" y="412" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+   </properties>
+  </object>
+  <object name="benzo" x="261" y="409" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="random"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterFacingRight" value="1"/>
+    <property name="monsterWeapon" value="fireball"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#5500ff" name="player" width="32" height="32">
+  <object name="player1" x="44" y="305" width="32" height="32"/>
+  <object name="player2" x="605" y="385" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#55ff00" name="exit" width="32" height="26">
+  <object name="exit1" x="488" y="405" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ffff7f" name="spawnpoints_reload" width="32" height="26" visible="0">
+  <object x="57" y="323" width="32" height="32"/>
+  <object x="306" y="55" width="32" height="32"/>
+  <object x="506" y="325" width="32" height="32"/>
+  <object x="326" y="143" width="32" height="32"/>
+  <object x="290" y="414" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="spawnpoints_monster" width="32" height="26">
+  <object x="393" y="17" width="32" height="32"/>
+  <object x="196" y="17" width="32" height="32"/>
+  <object x="235" y="18" width="32" height="32"/>
+  <object x="156" y="17" width="32" height="32"/>
+  <object x="274" y="17" width="32" height="32"/>
+  <object x="431" y="17" width="32" height="32"/>
+  <object x="79" y="17" width="32" height="32"/>
+  <object x="469" y="16" width="32" height="32"/>
+  <object x="354" y="17" width="32" height="32"/>
+  <object x="506" y="18" width="32" height="32"/>
+  <object x="118" y="17" width="32" height="32"/>
+  <object x="40" y="17" width="32" height="32"/>
+  <object x="314" y="17" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#aaaaff" name="barriers" width="32" height="26">
+  <object name="eisblock" x="459" y="391" width="14" height="14"/>
+  <object name="eisblock" x="459" y="409" width="14" height="14"/>
+  <object name="eisblock" x="459" y="427" width="14" height="14"/>
+  <object name="eisblock" x="36" y="364" width="14" height="14"/>
+  <object name="eisblock" x="54" y="364" width="14" height="14"/>
+  <object name="eisblock" x="72" y="364" width="14" height="14"/>
+  <object name="eisblock" x="90" y="364" width="14" height="14"/>
+  <object name="eisblock" x="108" y="364" width="14" height="14"/>
+  <object name="eisblock" x="108" y="270" width="14" height="14"/>
+  <object name="eisblock" x="180" y="198" width="14" height="14"/>
+  <object name="eisblock" x="270" y="144" width="14" height="14"/>
+ </objectgroup>
+ <objectgroup name="cannons" width="32" height="26">
+  <object name="cannon" x="469" y="38" width="52" height="32">
+   <properties>
+    <property name="cannonAngleDegrees" value="180"/>
+    <property name="cannonAngularVelocity" value="5"/>
+    <property name="cannonAutoFire" value="1"/>
+    <property name="cannonAutoRotate" value="1"/>
+    <property name="cannonFacingRight" value="0"/>
+    <property name="cannonFirePower" value="20"/>
+    <property name="cannonFireRate" value="3"/>
+    <property name="cannonMaxDegrees" value="220"/>
+    <property name="cannonMayBeUsed" value="0"/>
+    <property name="cannonMinDegrees" value="180"/>
+   </properties>
+  </object>
+  <object name="cannon" x="468" y="111" width="52" height="32">
+   <properties>
+    <property name="cannonAngleDegrees" value="180"/>
+    <property name="cannonAngularVelocity" value="4"/>
+    <property name="cannonAutoFire" value="1"/>
+    <property name="cannonAutoRotate" value="1"/>
+    <property name="cannonFacingRight" value="0"/>
+    <property name="cannonFirePower" value="30"/>
+    <property name="cannonFireRate" value="2"/>
+    <property name="cannonMaxDegrees" value="200"/>
+    <property name="cannonMayBeUsed" value="0"/>
+    <property name="cannonMinDegrees" value="170"/>
+   </properties>
+  </object>
+  <object name="cannon" x="468" y="184" width="52" height="32">
+   <properties>
+    <property name="cannonAngleDegrees" value="180"/>
+    <property name="cannonAngularVelocity" value="6"/>
+    <property name="cannonAutoFire" value="1"/>
+    <property name="cannonAutoRotate" value="1"/>
+    <property name="cannonFacingRight" value="0"/>
+    <property name="cannonFirePower" value="20"/>
+    <property name="cannonFireRate" value="2.5"/>
+    <property name="cannonMaxDegrees" value="200"/>
+    <property name="cannonMayBeUsed" value="0"/>
+    <property name="cannonMinDegrees" value="170"/>
+   </properties>
+  </object>
+  <object name="cannon" x="468" y="254" width="52" height="32">
+   <properties>
+    <property name="cannonAngleDegrees" value="180"/>
+    <property name="cannonAngularVelocity" value="4"/>
+    <property name="cannonAutoFire" value="1"/>
+    <property name="cannonAutoRotate" value="1"/>
+    <property name="cannonFacingRight" value="0"/>
+    <property name="cannonFirePower" value="35"/>
+    <property name="cannonFireRate" value="3"/>
+    <property name="cannonMaxDegrees" value="200"/>
+    <property name="cannonMayBeUsed" value="0"/>
+    <property name="cannonMinDegrees" value="150"/>
+   </properties>
+  </object>
+  <object name="cannon" x="469" y="326" width="52" height="32">
+   <properties>
+    <property name="cannonAngleDegrees" value="180"/>
+    <property name="cannonAngularVelocity" value="5"/>
+    <property name="cannonAutoFire" value="1"/>
+    <property name="cannonAutoRotate" value="1"/>
+    <property name="cannonFacingRight" value="0"/>
+    <property name="cannonFirePower" value="40"/>
+    <property name="cannonFireRate" value="2"/>
+    <property name="cannonMaxDegrees" value="200"/>
+    <property name="cannonMayBeUsed" value="0"/>
+    <property name="cannonMinDegrees" value="150"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="26" tilewidth="18" tileheight="18">
+ <properties>
+  <property name="mapName" value="Tricky Cannon"/>
+  <property name="mapSpecialCollFuncDur" value="0"/>
+  <property name="mapSpecialCollFuncValue" value="0"/>
+  <property name="mapSpecialCollectable" value=""/>
+  <property name="mapSpecialCondition" value=""/>
+  <property name="mapTimeLimit" value="40"/>
+  <property name="mapToast" value="creative shooting is needed"/>
+  <property name="monsterSpeed" value="1.3"/>
+  <property name="tilesetFile" value=""/>
+ </properties>
+ <tileset firstgid="1" name="level.png" tilewidth="18" tileheight="18" spacing="2">
+  <image source="level.png" width="64" height="512"/>
+ </tileset>
+ <layer name="Kachelebene 1" width="32" height="26">
+  <data encoding="base64" compression="zlib">
+   eJy9l00PgjAMhnvxK0YTojHqRY33Hfb/f5w9rLEppWvHoMkbCLR9xl4YMADAFbVp0An+Ea0dCveCOqMOqG1Qe1QuOgZriftEPVA71ksThZUTySPuHXVz8Hl/i+thZ8b9oj5BvmREuCTivlGvBr4Vnj7E9frvGUekvtX/Xmr1v5ei/s+Za6//S0fN/zX5mv9r8jX/Zc6SawBxpf90PjFpx1LJpy2I46Dk815T/mfWg3OzqOcMXgNGvcd/jZ9hzJB8ORc1vuV/EvsJxvMv+doYLD5xtfVf5mvzb52bqq89/7Kmdv9pXGuMNf/nrqkRedb/nhHxvzdfu/7I+38JPnHpO9zDj/hb48vv/7X/P4j7Ayv3XuQ=
+  </data>
+ </layer>
+ <objectgroup color="#ff55ff" name="monster" width="32" height="32">
+  <object name="flyer" x="366" y="50" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="diamond"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterAI" value="flyer"/>
+    <property name="monsterSpeed" value="1"/>
+   </properties>
+  </object>
+  <object name="flyer" x="89" y="81" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="diamond"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterAI" value="flyer"/>
+    <property name="monsterSpeed" value="1"/>
+   </properties>
+  </object>
+  <object name="flyer" x="209" y="105" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="diamond"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterAI" value="flyer"/>
+    <property name="monsterSpeed" value="1"/>
+   </properties>
+  </object>
+  <object name="flyer" x="471" y="139" width="32" height="32">
+   <properties>
+    <property name="collectableAsset" value="diamond"/>
+    <property name="collectableType" value="points"/>
+    <property name="monsterAI" value="flyer"/>
+    <property name="monsterSpeed" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#5500ff" name="player" width="32" height="32">
+  <object name="player1" x="142" y="412" width="32" height="32"/>
+  <object name="player2" x="525" y="422" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#55ff00" name="exit" width="32" height="26">
+  <object name="exit1" x="365" y="123" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="spawnpoints_monster" width="32" height="26">
+  <object x="40" y="21" width="32" height="32"/>
+  <object x="196" y="21" width="32" height="32"/>
+  <object x="469" y="20" width="32" height="32"/>
+  <object x="506" y="22" width="32" height="32"/>
+  <object x="235" y="22" width="32" height="32"/>
+  <object x="314" y="21" width="32" height="32"/>
+  <object x="274" y="21" width="32" height="32"/>
+  <object x="79" y="21" width="32" height="32"/>
+  <object x="354" y="21" width="32" height="32"/>
+  <object x="118" y="21" width="32" height="32"/>
+  <object x="393" y="21" width="32" height="32"/>
+  <object x="156" y="21" width="32" height="32"/>
+  <object x="431" y="21" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#aaaaff" name="barriers" width="32" height="26">
+  <object name="eisblock" x="392" y="151" width="14" height="14"/>
+  <object name="eisblock" x="396" y="143" width="14" height="14"/>
+  <object name="eisblock" x="399" y="132" width="14" height="14"/>
+  <object name="eisblock" x="351" y="121" width="14" height="14"/>
+  <object name="eisblock" x="367" y="109" width="14" height="14"/>
+  <object name="eisblock" x="396" y="121" width="14" height="14"/>
+  <object name="eisblock" x="390" y="114" width="14" height="14"/>
+  <object name="eisblock" x="383" y="159" width="14" height="14"/>
+  <object name="eisblock" x="374" y="162" width="14" height="14"/>
+  <object name="eisblock" x="363" y="159" width="14" height="14"/>
+  <object name="eisblock" x="355" y="152" width="14" height="14"/>
+  <object name="eisblock" x="350" y="142" width="14" height="14"/>
+  <object name="eisblock" x="349" y="131" width="14" height="14"/>
+  <object name="eisblock" x="356" y="114" width="14" height="14"/>
+  <object name="eisblock" x="380" y="108" width="14" height="14"/>
+ </objectgroup>
+ <objectgroup name="collectables" width="32" height="26"/>
+ <objectgroup name="cannons" width="32" height="26">
+  <object name="cannon" x="61" y="416" width="52" height="32">
+   <properties>
+    <property name="cannonAngleDegrees" value="45"/>
+    <property name="cannonAngularVelocity" value="5"/>
+    <property name="cannonAutoFire" value="0"/>
+    <property name="cannonAutoRotate" value="0"/>
+    <property name="cannonCanDestroyBarrier" value="1"/>
+    <property name="cannonDestroyable" value="0"/>
+    <property name="cannonFacingRight" value="1"/>
+    <property name="cannonFirePower" value="40"/>
+    <property name="cannonFireRate" value="1"/>
+    <property name="cannonMaxDegrees" value="89"/>
+    <property name="cannonMayBeUsed" value="1"/>
+    <property name="cannonMinDegrees" value="-30"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="floatingPlattforms" width="32" height="26">
+  <object x="270" y="424" width="54" height="18">
+   <properties>
+    <property name="plattformAsset" value=""/>
+    <property name="plattformAutoMove" value="1"/>
+    <property name="plattformDestroyable" value="0"/>
+    <property name="plattformMaxPosX" value="26"/>
+    <property name="plattformMaxPosY" value="0"/>
+    <property name="plattformMinPosX" value="2"/>
+    <property name="plattformMinPosY" value="0"/>
+    <property name="plattformMoveLeftRight" value="0"/>
+    <property name="plattformMoveUpDown" value="1"/>
+    <property name="plattformSelfDestruct" value="1"/>
+    <property name="plattformSelfDestructDelayAfterTouch&#9;" value=""/>
+    <property name="plattformSelfDestructTime" value=""/>
+    <property name="plattformSpeed" value="2"/>
+    <property name="plattformStartRight" value="0"/>
+    <property name="plattformStartUp" value="0"/>
+    <property name="plattformWidthInTiles" value="3"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="de.philweb.bubblr"
+      android:versionCode="12"
+      android:versionName="0.50"
+      android:installLocation="auto">"
+    
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="15"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" /> 
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.VIBRATE"/>
+		
+	<uses-feature android:name="android.hardware.sensor.accelerometer" />
+	
+	<supports-screens android:smallScreens="false"
+                  android:normalScreens="true"
+                  android:largeScreens="true"
+                  android:xlargeScreens="true"/>
+	
+    <application android:icon="@drawable/icon" android:debuggable="false" android:label="@string/app_name">
+        <activity android:name=".BubblrAndroid"
+                  android:label="@string/app_name"
+                  android:configChanges="keyboard|keyboardHidden|orientation"
+                  android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+		<activity android:name="com.swarmconnect.SwarmMainActivity"
+    	android:configChanges="orientation|keyboardHidden"
+    	android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+   	 	android:windowSoftInputMode="stateHidden" />
+		<service android:name="com.swarmconnect.NotificationService" android:process=":swarm" />
+		<activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+    </application>
+   
+</manifest> 

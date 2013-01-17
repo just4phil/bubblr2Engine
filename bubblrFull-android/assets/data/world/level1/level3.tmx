@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="26" tilewidth="18" tileheight="18">
+ <properties>
+  <property name="RTDEnabled" value="0"/>
+  <property name="RTDTimeLimit" value="0"/>
+  <property name="mapName" value="Tutorial 3 - floating plattforms"/>
+  <property name="mapTimeLimit" value="60"/>
+  <property name="mapToast" value="Tutorial 3 - take the floating plattforms and enter the exit before the timelimit expires"/>
+  <property name="monsterSpeed" value="1"/>
+ </properties>
+ <tileset firstgid="1" name="level.png" tilewidth="18" tileheight="18" spacing="2">
+  <image source="level.png" width="64" height="512"/>
+ </tileset>
+ <layer name="Kachelebene 1" width="32" height="26">
+  <data encoding="base64" compression="zlib">
+   eJzt17EJACAQBMFPVGxAEAT779IL/EALuGgfNj4ndEfEUsXcvrtDTdVVNZa7+Y4W3vv97n38+PHjx48fP3783sP/+t3/j9w90B8NKQ==
+  </data>
+ </layer>
+ <objectgroup color="#5500ff" name="player" width="32" height="32">
+  <object name="player1" x="270" y="402" width="32" height="32">
+   <properties>
+    <property name="playerWeapon" value="none"/>
+   </properties>
+  </object>
+  <object name="player2" x="599" y="417" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#55ff00" name="exit" width="32" height="26">
+  <object name="exit1" x="475" y="39" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ffff7f" name="spawnpoints_reload" width="32" height="26" visible="0">
+  <object x="57" y="323" width="32" height="32"/>
+  <object x="306" y="55" width="32" height="32"/>
+  <object x="506" y="325" width="32" height="32"/>
+  <object x="326" y="143" width="32" height="32"/>
+  <object x="290" y="414" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="spawnpoints_monster" width="32" height="26">
+  <object x="256" y="35" width="32" height="32"/>
+  <object x="237" y="24" width="32" height="32"/>
+  <object x="316" y="23" width="32" height="32"/>
+  <object x="276" y="23" width="32" height="32"/>
+  <object x="81" y="23" width="32" height="32"/>
+  <object x="356" y="23" width="32" height="32"/>
+  <object x="120" y="23" width="32" height="32"/>
+  <object x="395" y="23" width="32" height="32"/>
+  <object x="158" y="23" width="32" height="32"/>
+  <object x="104" y="32" width="32" height="32"/>
+  <object x="42" y="23" width="32" height="32"/>
+  <object x="198" y="23" width="32" height="32"/>
+  <object x="176" y="31" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="floatingPlattforms" width="32" height="26">
+  <object x="464" y="286" width="72" height="18">
+   <properties>
+    <property name="plattformAsset" value=""/>
+    <property name="plattformAutoMove" value="1"/>
+    <property name="plattformDestroyable" value="0"/>
+    <property name="plattformMaxPosX" value="20"/>
+    <property name="plattformMaxPosY" value="7"/>
+    <property name="plattformMinPosX" value="2"/>
+    <property name="plattformMinPosY" value="16"/>
+    <property name="plattformMoveLeftRight" value="1"/>
+    <property name="plattformMoveUpDown" value="0"/>
+    <property name="plattformSelfDestruct" value="1"/>
+    <property name="plattformSelfDestructDelayAfterTouch&#9;" value=""/>
+    <property name="plattformSelfDestructTime" value=""/>
+    <property name="plattformSpeed" value="0.5"/>
+    <property name="plattformStartRight" value="0"/>
+    <property name="plattformStartUp" value="0"/>
+    <property name="plattformWidthInTiles" value="4"/>
+   </properties>
+  </object>
+  <object x="171" y="134" width="126" height="18">
+   <properties>
+    <property name="plattformAsset" value=""/>
+    <property name="plattformAutoMove" value="1"/>
+    <property name="plattformDestroyable" value="0"/>
+    <property name="plattformMaxPosX" value="23"/>
+    <property name="plattformMaxPosY" value="7"/>
+    <property name="plattformMinPosX" value="2"/>
+    <property name="plattformMinPosY" value="16"/>
+    <property name="plattformMoveLeftRight" value="1"/>
+    <property name="plattformMoveUpDown" value="0"/>
+    <property name="plattformSelfDestruct" value="1"/>
+    <property name="plattformSelfDestructDelayAfterTouch&#9;" value=""/>
+    <property name="plattformSelfDestructTime" value=""/>
+    <property name="plattformSpeed" value="4"/>
+    <property name="plattformStartRight" value="1"/>
+    <property name="plattformStartUp" value="0"/>
+    <property name="plattformWidthInTiles" value="7"/>
+   </properties>
+  </object>
+  <object x="328" y="369" width="72" height="18">
+   <properties>
+    <property name="plattformAsset" value=""/>
+    <property name="plattformAutoMove" value="1"/>
+    <property name="plattformDestroyable" value="0"/>
+    <property name="plattformMaxPosX" value="20"/>
+    <property name="plattformMaxPosY" value="7"/>
+    <property name="plattformMinPosX" value="2"/>
+    <property name="plattformMinPosY" value="16"/>
+    <property name="plattformMoveLeftRight" value="1"/>
+    <property name="plattformMoveUpDown" value="0"/>
+    <property name="plattformSelfDestruct" value="1"/>
+    <property name="plattformSelfDestructDelayAfterTouch&#9;" value=""/>
+    <property name="plattformSelfDestructTime" value=""/>
+    <property name="plattformSpeed" value="3"/>
+    <property name="plattformStartRight" value="0"/>
+    <property name="plattformStartUp" value="0"/>
+    <property name="plattformWidthInTiles" value="4"/>
+   </properties>
+  </object>
+  <object x="195" y="216" width="72" height="18">
+   <properties>
+    <property name="plattformAsset" value=""/>
+    <property name="plattformAutoMove" value="1"/>
+    <property name="plattformDestroyable" value="0"/>
+    <property name="plattformMaxPosX" value="20"/>
+    <property name="plattformMaxPosY" value="7"/>
+    <property name="plattformMinPosX" value="2"/>
+    <property name="plattformMinPosY" value="16"/>
+    <property name="plattformMoveLeftRight" value="1"/>
+    <property name="plattformMoveUpDown" value="0"/>
+    <property name="plattformSelfDestruct" value="1"/>
+    <property name="plattformSelfDestructDelayAfterTouch&#9;" value=""/>
+    <property name="plattformSelfDestructTime" value=""/>
+    <property name="plattformSpeed" value="3"/>
+    <property name="plattformStartRight" value="0"/>
+    <property name="plattformStartUp" value="0"/>
+    <property name="plattformWidthInTiles" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
