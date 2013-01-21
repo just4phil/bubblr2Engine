@@ -176,13 +176,11 @@ public class GameScreen extends Screen {
 
 		state = GAME_READY;
 		
-//		int screenWidth = Gdx.graphics.getWidth();	
-//		int screenHeight = Gdx.graphics.getHeight();
-//		guiCam = new OrthographicCamera(screenWidth, screenHeight); // (800, 480);
-//		guiCam.position.set(screenWidth / 2, screenHeight / 2, 0); // (800 / 2, 480 / 2, 0);
 		
-		guiCam = new OrthographicCamera(800, 480); // (800, 480);
-		guiCam.position.set(800 / 2, 480 / 2, 0); // (800 / 2, 480 / 2, 0);
+		guiCam = bubblr.getCamera();
+		
+//		guiCam = new OrthographicCamera(800, 480); // (800, 480);
+//		guiCam.position.set(800 / 2, 480 / 2, 0); // (800 / 2, 480 / 2, 0);
 		
 		
 		touchPoint = new Vector3();
@@ -203,7 +201,7 @@ public class GameScreen extends Screen {
 		game_monsterSpeed = 1.5f;	
 	
 		level = new Level(bubblr, game_monsterSpeed);	
-		renderer = new WorldRenderer(batcher, level, levelNumber);
+		renderer = new WorldRenderer(batcher, level, levelNumber, bubblr);
 
 
 		
@@ -529,14 +527,19 @@ public class GameScreen extends Screen {
 	
 	@Override
 	public void present (float deltaTime) {
-		GLCommon gl = Gdx.gl;
-		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		gl.glEnable(GL10.GL_TEXTURE_2D);
 
 		renderer.render(level, batcher);				// -------------- render --------------------
 
+		
+		//----------- prepare cam for GUI and text ----------------------------------------------------
+		guiCam.position.x = 400; // bubblr.screenWidth / 2.0f; //camWidth / 2.0f;	 	// 400	
+		guiCam.position.y = 240; // bubblr.screenHeight / 2.0f; //camHeight / 2.0f;	// 240
 		guiCam.update();
+				
 		batcher.setProjectionMatrix(guiCam.combined);
+		
+		
+		//------- render gui and text ------------------------------
 		batcher.enableBlending();
 		batcher.begin();
 		

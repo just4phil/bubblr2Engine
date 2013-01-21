@@ -33,16 +33,19 @@ public class Welt {
 	public static final long RENDERER_SLEEP_MS = 0; // 34 -> 30 fps, 30 -> 34 fps, 22 gives ~46 FPS, 20 = 100, 10 = 50
 	
 	//================= ... ====================
-	public static final float WORLD_WIDTH = 15; // 10;
-	public static final float WORLD_HEIGHT = 10; // 15 * 20;
+
+	public static float PIXELS_PER_METER = 60.0f;
 	
-	public static final float mapgrenze_rechts = 8.79f;	// in metern (60 px pro meter)
-	public static final float mapgrenze_links = 0.85f;
-	public static final float mapgrenze_oben = 8.0f;
-	public static final float mapgrenze_unten = 0.0f;
+//	public static final float WORLD_WIDTH = 15; // 10;
+//	public static final float WORLD_HEIGHT = 10; // 15 * 20;
+		
+//	public static final float mapgrenze_rechts = 8.79f;	// in metern (60 px pro meter)
+//	public static final float mapgrenze_links = 0.85f;
+//	public static final float mapgrenze_oben = 8.0f;
+//	public static final float mapgrenze_unten = 0.0f;
 	
-	public static final int OFFSET_X_MAP_SCREEN_PX = 115;		// to display mapName in renderer (was formerly in gamescreen)
-	public static final int OFFSET_Y_MAP_SCREEN_PX = 6;			// to display mapName in renderer (was formerly in gamescreen)
+//	public static final int OFFSET_X_MAP_SCREEN_PX = 115;		// to display mapName in renderer (was formerly in gamescreen)
+//	public static final int OFFSET_Y_MAP_SCREEN_PX = 6;			// to display mapName in renderer (was formerly in gamescreen)
 	
 
 	
@@ -91,8 +94,6 @@ public class Welt {
 	public static final short MASK_COLLECTABLE = ~CATEGORY_BUBBLE;
 	public static final short MASK_BUBBLE = ~CATEGORY_COLLECTABLE;
 	
-	public static float PIXELS_PER_METER = 60.0f;
-
 	
 	public static final int WORLD_STATE_RUNNING = 0;
 	public static final int WORLD_STATE_NEXT_LEVEL = 1;

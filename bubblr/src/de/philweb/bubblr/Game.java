@@ -3,6 +3,7 @@ package de.philweb.bubblr;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 
 import de.philweb.bubblr.screens.AbstractScreen;
 import de.philweb.bubblr.screens.Screen;
@@ -18,7 +19,13 @@ public abstract class Game implements ApplicationListener, InputProcessor {
 	int renderID = 1;
 	
        
-    
+	public float camWidth = 0.0f;		//the width of the cam
+	public float camHeight = 0.0f;		//the height of the cam
+	public float aspectRatio = 0.0f;	//the aspect ratio
+	public int screenWidth = 0;		//screen width in pixel size
+	public int screenHeight = 0;		//screen height in pixel size
+	protected OrthographicCamera cam;		//our camera
+	
     
     //=========== Handler f�r Ads etc ==================
     
@@ -86,9 +93,23 @@ public abstract class Game implements ApplicationListener, InputProcessor {
 
 	@Override
 	public void resize (int width, int height) {
-		WorldRenderer.setPixPerMeter();
+		
+//		WorldRenderer.setPixPerMeter();
+		
+		
+		screenWidth = width;
+		screenHeight = height;
+		aspectRatio = (float) screenWidth / (float) screenHeight;
+		camHeight = 480f;											//our camera will always be 1.0f height
+		camWidth = 480f * aspectRatio; 							//width depend on aspect ratio
+		
+        cam = new OrthographicCamera(camWidth,camHeight);
+        cam.position.set(camWidth / 2.0f, camHeight / 2.0f, 0.0f);
 	}
 
+	
+	
+	
 	@Override
 	public void pause () {
 		screen.pause();
@@ -104,5 +125,7 @@ public abstract class Game implements ApplicationListener, InputProcessor {
 	}
 //--------------------------------
 
-	
+	public OrthographicCamera getCamera() {
+		return cam;
+	}
 }

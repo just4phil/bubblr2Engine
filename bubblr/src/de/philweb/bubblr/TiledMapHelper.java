@@ -32,13 +32,11 @@ import java.util.HashMap;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.tiled.TileAtlas;
 import com.badlogic.gdx.graphics.g2d.tiled.TileMapRenderer;
 import com.badlogic.gdx.graphics.g2d.tiled.TiledLoader;
 import com.badlogic.gdx.graphics.g2d.tiled.TiledMap;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.EdgeShape;
@@ -47,21 +45,17 @@ import com.badlogic.gdx.physics.box2d.World;
 
 public class TiledMapHelper {
 	
-	Vector3 tmp = new Vector3();
-		
-	
 	private static final int[] layersList = { 0 };
 
-	public static final int TILEDMAPHEIGHT = 26;
-	public static final int tilesize_x = 18; 
-	public static final int tilesize_y = 18;
+//	public static final int TILEDMAPHEIGHT = 26;
+//	public static final int tilesize_x = 18; 
+//	public static final int tilesize_y = 18;
 	
+//	private OrthographicCamera camera;
+
 	private FileHandle packFileDirectory;
-
-	private OrthographicCamera camera;
-
 	private TileAtlas tileAtlas;
-	private TileMapRenderer tileMapRenderer;
+	protected TileMapRenderer tileMapRenderer;
 	private TiledMap map;
 	
 	
@@ -209,15 +203,9 @@ public class TiledMapHelper {
 	/**
 	 * Renders the part of the map that should be visible to the user.
 	 */
-	public void render() {
-		tileMapRenderer.getProjectionMatrix().set(camera.combined);
-
-//		Vector3 tmp = new Vector3();
-		tmp.set(0, 0, 0);
-		camera.unproject(tmp);
-
-		tileMapRenderer.render((int) tmp.x, (int) tmp.y,
-				Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), layersList);
+	public void render(int x, int y, int width, int height) {
+		
+		tileMapRenderer.render(x, y, width, height, layersList);
 	}
 
 	/**
@@ -468,30 +456,6 @@ public class TiledMapHelper {
 		}
 	}
 
-	/**
-	 * Prepares the helper's camera object for use.
-	 * 
-	 * @param screenWidth
-	 * @param screenHeight
-	 */
-	public void prepareCamera(int screenWidth, int screenHeight) {
-		camera = new OrthographicCamera(screenWidth, screenHeight);
-
-		camera.position.set(0, 0, 0);
-	}
-
-	/**
-	 * Returns the camera object created for viewing the loaded map.
-	 * 
-	 * @return OrthographicCamera
-	 */
-	public OrthographicCamera getCamera() {
-		if (camera == null) {
-			throw new IllegalStateException(
-					"getCamera() called out of sequence");
-		}
-		return camera;
-	}
 
 	/**
 	 * Describes the start and end points of a line segment and contains a
