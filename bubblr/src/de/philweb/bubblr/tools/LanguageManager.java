@@ -74,125 +74,66 @@ public class LanguageManager {
         public boolean loadLanguage(String languageName) {
 //        	System.out.println("LanguageManager: try to load: " + languageName);
                       
-			try {
-			
-			//------ method 1 ----------------------------------
-				
-//				DOMParser parser = new DOMParser();
-				
-//				parser.parse(Gdx.files.internal(m_languagesFile).readString("utf-8"));
-					// returns: java.net.MalformedURLException: no protocol: %3C?xml%20version=%221.0%22%20encoding=%22utf-8%22%20?%3E%0A%3Clanguages%3E%0A%0A%0
-					//			0is%20not%20implemented%20at%20the%20moment%20(coming%20soon)!%22%20value
-				
-//				parser.parse(m_languagesFile);
-					// returns: java.io.FileNotFoundException: L:\eclipse-projects\bubblr2\bubblr-desktop\data\languages.xml (Das System kann den angegebenen Pfad nicht finden)
-				
-//				parser.parse(new InputSource(new ByteArrayInputStream(m_languagesFile.getBytes("utf-8"))));
-					// returns: [Fatal Error] :1:1: Content ist nicht zulässig in Prolog.
-					//			org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content ist nicht zulässig in Prolog.
-					//			but: xml file seems to be valid: <?xml version="1.0" encoding="utf-8"?>
-				
-//				parser.parse(Gdx.files.internal(m_languagesFile).readString("utf-8"));
-					// returns: java.net.MalformedURLException: no protocol: %3C?xml%20version=%221.0%22%20encoding=%22utf-8%22?%3E%0A%3Clanguages%3E%0A%0A%09%3
-				
-				
-//				Document doc = parser.getDocument();
-				 
-				
-			//------ method 2 ----------------------------------
-				
-        		DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
-        		DocumentBuilder builder = null;
-        		try {
-        		    builder = builderFactory.newDocumentBuilder();
-        		} 
-        		catch (ParserConfigurationException e) {
-        		    e.printStackTrace();  
-        		}
-        		
-        		Document doc = null;
-        		
-        		try {
-        		    
-//        			doc = builder.parse(Gdx.files.internal(m_languagesFile).read());
-        		    	// returns: languages: items: 21
-        		    	//			languages: language: #text
-        		    	//			java.lang.NullPointerException
-        		    	//			LanguageManager: couldn´t load language en_UK
-        		    	//			at de.philweb.bubblr.tools.LanguageManager.getNodeAttr(LanguageManager.java:246)
-        		    
-//        		    doc = builder.parse(new InputSource(Gdx.files.internal(m_languagesFile).readString("UTF-8")));
-        				// returns:
-						//			java.net.MalformedURLException: no protocol: %3C?xml%20version=%221.0%22%20encoding=%22utf-8%22%20?%3E%0A%3Clanguages%3E%0A%0K
-						//					0is%20not%20implemented%20at%20the%20moment%20(coming%20soon)!%22%20value=%22Questo%20non%20&#232;%20ancora%20disponi
-						//						at java.net.URL.<init>(Unknown Source)
-						//						at java.net.URL.<init>(Unknown Source)
-						//						at java.net.URL.<init>(Unknown Source)
-						//						at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(Unknown Source)
-						//						at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(Unknown Source)
-						//						at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
-						//						at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
-						//						at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
-						//						at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(Unknown Source)
-						//						at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(Unknown Source)
-						//						at de.philweb.bubblr.tools.LanguageManager.loadLanguage(LanguageManager.java:124)
-        		}
-        		catch (SAXException e) {
-        		    e.printStackTrace();
-        		}
-        		catch (IOException e) {
-        		    e.printStackTrace();
-        		}
-				
-				//--------------------------------------
-				
-				// Get the document's root XML node
-        		NodeList root = doc.getChildNodes();
-        		Node languagesNode = getNode("languages", root);
-        		
-				NodeList languages = languagesNode.getChildNodes();
-				
-				Gdx.app.log("languages", "items: " + languages.getLength());
-				
-				for (int x = 0; x < languages.getLength(); x++ ) {			// Iterate over languages, trying to find the selected one
-					
-					Node language = languages.item(x);
-					
-					Gdx.app.log("languages", "language: " + language.getNodeName());
-					Gdx.app.log("Language", "" + getNodeAttr("name", language));
-					
-					if (getNodeAttr("name", language).equals(languageName)) {
-						
-						m_language.clear();								// Clear the previous language
-						NodeList strings = language.getChildNodes();
-						  
-						// Load all the strings for that language
-						for (int j = 0; j < strings.getLength(); ++j) {
-							
-							Node keyValuePair = strings.item(j);   
-							String key = getNodeAttr("key", keyValuePair);
-							String value = getNodeAttr("value", keyValuePair);
-							value = value.replace("<br />", "\n");
-							m_language.put(key, value);
-							System.out.println("LanguageManager: loading key " + key);
-						}
-						
+        	
+        	
+            try {
+                DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder builder = factory.newDocumentBuilder();
+                InputSource input = new InputSource(Gdx.files.internal(m_languagesFile).read());
+                input.setEncoding("UTF-8");
+                Document document = builder.parse(input);
+
+                NodeList languages = document.getElementsByTagName("language");
+                
+//                Gdx.app.log("languages", "items: " + languages.getLength());
+                
+             // Iterate over languages, trying to find the selected one
+                for (int i = 0, j = languages.getLength(); i < j; i++) {
+                   
+                	Node language = languages.item(i);
+                   
+//                	Gdx.app.log("languages", "language: " + language.getAttributes().getNamedItem("name").getNodeValue());
+                	
+                	if (language.getAttributes().getNamedItem("name").getTextContent().equals(languageName)) {
+                		
+                		NodeList strings = language.getChildNodes();	// get all strings
+                		
+                		for (int k = 0, l = strings.getLength(); k < l; k++) {
+                			
+                			Node string = strings.item(k);
+                			NamedNodeMap attributes = string.getAttributes();
+                			
+                			if (attributes != null) {
+                				
+                				String key = attributes.getNamedItem("key").getNodeValue();
+    							String value = attributes.getNamedItem("value").getNodeValue();
+//    							String key = attributes.getNamedItem("key").getTextContent();
+//    							String value = attributes.getNamedItem("value").getTextContent();
+//    							value = value.replace("<br />", "\n");
+    							m_language.put(key, value);
+//    							System.out.println("LanguageManager: loading key " + key);
+                			}
+                		}
+                		
 						m_languageName = languageName;
-						System.out.println("LanguageManager: " + languageName + " language sucessfully loaded");
-						 
-						return true;  
-					}
-				}
-				 
-   
-			}
-			catch ( Exception e ) {
-			    e.printStackTrace();
-			}
-                        
-			
-			System.out.println("LanguageManager: couldn´t load language " + languageName);
-			return false;
+//						System.out.println("LanguageManager: " + languageName + " language sucessfully loaded");
+						
+						return true; 
+                	}
+                }
+                
+             } catch (ParserConfigurationException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+             } catch (SAXException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+             } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+             }
+            
+            return false; 
         }
  
         
