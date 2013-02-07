@@ -94,7 +94,7 @@ public class LanguageManager {
                    
 //                	Gdx.app.log("languages", "language: " + language.getAttributes().getNamedItem("name").getNodeValue());
                 	
-                	if (language.getAttributes().getNamedItem("name").getTextContent().equals(languageName)) {
+                	if (language.getAttributes().getNamedItem("name").getNodeValue().equals(languageName)) {
                 		
                 		NodeList strings = language.getChildNodes();	// get all strings
                 		

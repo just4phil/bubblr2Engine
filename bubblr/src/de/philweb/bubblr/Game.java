@@ -24,6 +24,7 @@ public abstract class Game implements ApplicationListener, InputProcessor {
 	public float aspectRatio = 0.0f;	//the aspect ratio
 	public int screenWidth = 0;		//screen width in pixel size
 	public int screenHeight = 0;		//screen height in pixel size
+	
 	protected OrthographicCamera cam;		//our camera
 	
     
