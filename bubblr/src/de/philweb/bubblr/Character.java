@@ -99,9 +99,9 @@ public class Character extends DynamicGameObject {
 
 	
 	
-	public Character (String characterName, String typ, float x, float y, float width, float height, float fix_verkleinerung_x, float fix_verkleinerung_y, boolean facingRight, World box2dwelt, float JUMP_VELOCITY, float MOVE_VELOCITY) {
+	public Character (Bubblr bubblr, String characterName, String typ, float x, float y, float width, float height, float fix_verkleinerung_x, float fix_verkleinerung_y, boolean facingRight, World box2dwelt, float JUMP_VELOCITY, float MOVE_VELOCITY) {
 		
-		initialize_DynamicGameObject(characterName, typ, x, y, width, height, fix_verkleinerung_x, fix_verkleinerung_y, true, box2dwelt);
+		initialize_DynamicGameObject(bubblr, characterName, typ, x, y, width, height, fix_verkleinerung_x, fix_verkleinerung_y, true, box2dwelt);
 		
 		this.characterName = characterName;
 		this.facingRight = facingRight;

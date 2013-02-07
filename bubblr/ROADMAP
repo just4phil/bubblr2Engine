@@ -1,0 +1,44 @@
+
+
+
+------------------- TODO ---------------------------------------
+
+- add strings in languages.xml
+
+=> v0.62 [mid of February 2013]
+
+---------------- end of TODO -----------------------------------
+
+- avoid resizing, keep aspect ratio on all devices -> viewport
+
+- maybe change TiledMap system?
+
+=> v0.70 [end of February 2013]
+
+
+- support multiple resolutions -> resolutionsResolver: normal, large, hd
+
+- maybe new grafix ??? -> timecritical!
+
+- maybe dynamic truetypefonts for different resolutions and languages
+
+=> v0.80 [mid of March 2013] ->  “bubblr HD”
+
+- optimize for OUYA -> support multiple controllers
+
+- controller configuration screen
+
+=> v0.90 [mid of April 2013] ->  “bubblr OUYA”
+
+- enable 2-player-mode, different game-modes (coop, ctf, last-dummy-standing)
+
+- new 2-player-levels
+
+- maybe in app purchase multiplayer for OUYA- / play-store
+
+=> v 1.00 [end of June 2013] -> “bubblr multiplayer”
+
+
+-------------------------------------------------------
+
+Maybe better multiple resolutions after bubblr OUYA / multiplayer ??

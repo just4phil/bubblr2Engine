@@ -42,9 +42,9 @@ public class character_goodGuy extends Character {
 	
 	
     
-	public character_goodGuy(String characterName, String typ, float x, float y, float JUMP_VELOCITY, float MOVE_VELOCITY, boolean facingRight, World box2dwelt, Welt world) {
+	public character_goodGuy(Bubblr bubblr, String characterName, String typ, float x, float y, float JUMP_VELOCITY, float MOVE_VELOCITY, boolean facingRight, World box2dwelt, Welt world) {
 		
-		super(characterName, typ, x, y, width, height, fix_verkleinerung_x, fix_verkleinerung_y, facingRight, box2dwelt, JUMP_VELOCITY, MOVE_VELOCITY);
+		super(bubblr, characterName, typ, x, y, width, height, fix_verkleinerung_x, fix_verkleinerung_y, facingRight, box2dwelt, JUMP_VELOCITY, MOVE_VELOCITY);
 		
 		this.facingRight = facingRight;
 		this.world = world;

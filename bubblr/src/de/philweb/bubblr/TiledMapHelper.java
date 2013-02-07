@@ -63,7 +63,7 @@ public class TiledMapHelper {
 
 
 	
-	public ArrayList<GameObject> getObjectList(String ID) {
+	public ArrayList<GameObject> getObjectList(String ID, float pixelPerMeter) {
 		
 		ArrayList<GameObject> objectList = new ArrayList<GameObject>();
 		
@@ -79,8 +79,8 @@ public class TiledMapHelper {
 					
 					GameObject objekt  = new GameObject();
 					
-					float x = getMap().objectGroups.get(counter_groups).objects.get(counter).x / Welt.PIXELS_PER_METER;
-					float y = (480 - getMap().objectGroups.get(counter_groups).objects.get(counter).y) / Welt.PIXELS_PER_METER;
+					float x = getMap().objectGroups.get(counter_groups).objects.get(counter).x / pixelPerMeter;
+					float y = (480 - getMap().objectGroups.get(counter_groups).objects.get(counter).y) / pixelPerMeter;
 					objekt.x = x;
 					objekt.y = y;
 					objekt.assetName = getMap().objectGroups.get(counter_groups).objects.get(counter).name;
@@ -98,7 +98,7 @@ public class TiledMapHelper {
 	
 ////------------ liest die objekte (monster + player) aus der map --------------------------------
 
-	public ArrayList<Vector2> getCharacterList(String ID) {
+	public ArrayList<Vector2> getCharacterList(String ID, float pixelPerMeter) {
 		
 		ArrayList<Vector2> objectList = new ArrayList<Vector2>();
 		
@@ -114,8 +114,8 @@ public class TiledMapHelper {
 				
 				for (int counter = 0; counter < anz_objekte; counter++) {
 					
-					float x = getMap().objectGroups.get(counter_groups).objects.get(counter).x / Welt.PIXELS_PER_METER;
-					float y = (480 - getMap().objectGroups.get(counter_groups).objects.get(counter).y) / Welt.PIXELS_PER_METER;
+					float x = getMap().objectGroups.get(counter_groups).objects.get(counter).x / pixelPerMeter;
+					float y = (480 - getMap().objectGroups.get(counter_groups).objects.get(counter).y) / pixelPerMeter;
 					
 					Vector2 objekt  = new Vector2();
 					objekt.set(x, y);	// TODO

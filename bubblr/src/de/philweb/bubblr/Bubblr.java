@@ -32,7 +32,8 @@ public class Bubblr extends Game {
     protected static AssetManager m_assetManager;
     
   
-    
+
+	
     
 	//--------- handler f�r ads etc an superklasse �bergeben -------
 	public Bubblr(IActivityRequestHandler handler, boolean isDemoVersion) {
@@ -80,6 +81,21 @@ public class Bubblr extends Game {
 	
 
 	//-----------------------------------------------------------
+	
+	
+	public float meterToPixels(float meter) {
+		
+		return meter * pixelPerMeter;
+	}
+	
+	
+	public float pixelsToMeter(float pixels) {
+		
+		return pixels / pixelPerMeter;		
+	}
+	
+	
+	
 	
 	public void exit() {
 		

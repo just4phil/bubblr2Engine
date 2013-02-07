@@ -4,6 +4,8 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
 
 import de.philweb.bubblr.screens.AbstractScreen;
 import de.philweb.bubblr.screens.Screen;
@@ -17,16 +19,17 @@ public abstract class Game implements ApplicationListener, InputProcessor {
 	Screen screen;
 	AbstractScreen screenScene2D;
 	int renderID = 1;
+		
 	
-       
-	public float camWidth = 0.0f;		//the width of the cam
-	public float camHeight = 0.0f;		//the height of the cam
-	public float aspectRatio = 0.0f;	//the aspect ratio
-	public int screenWidth = 0;		//screen width in pixel size
-	public int screenHeight = 0;		//screen height in pixel size
+	protected OrthographicCamera _camera;		//our camera
 	
-	protected OrthographicCamera cam;		//our camera
+	public Rectangle _viewport = null;
 	
+	public static final int VIRTUAL_WIDTH = 800; //25;		// in meters (px: 800)		//----- should be in meters???
+	public static final int VIRTUAL_HEIGHT = 480; //15;	// in meters (px: 480)			//----- should be in meters???
+	private static final float ASPECT_RATIO = 1.666667f;
+	public float pixelPerMeter;
+
     
     //=========== Handler f�r Ads etc ==================
     
@@ -70,6 +73,11 @@ public abstract class Game implements ApplicationListener, InputProcessor {
 	@Override
 	public void create () {
 			
+		// Ortographic camera
+		_camera = new OrthographicCamera(VIRTUAL_WIDTH, VIRTUAL_HEIGHT);
+		_camera.setToOrtho(false, VIRTUAL_WIDTH, VIRTUAL_HEIGHT);
+		
+		
 		screen = getStartScreen();
 	}
 
@@ -92,20 +100,38 @@ public abstract class Game implements ApplicationListener, InputProcessor {
 		
 	}
 
+	
+	
 	@Override
-	public void resize (int width, int height) {
+	public void resize (int arg0, int arg1) {			//---- code from siondream -> thx david! ---------------
 		
-//		WorldRenderer.setPixPerMeter();
-		
-		
-		screenWidth = width;
-		screenHeight = height;
-		aspectRatio = (float) screenWidth / (float) screenHeight;
-		camHeight = 480f;											//our camera will always be 1.0f height
-		camWidth = 480f * aspectRatio; 							//width depend on aspect ratio
-		
-        cam = new OrthographicCamera(camWidth,camHeight);
-        cam.position.set(camWidth / 2.0f, camHeight / 2.0f, 0.0f);
+		// calculate new viewport
+        float aspectRatio = (float)arg0 / (float)arg1;
+        float scale = 1f;
+        Vector2 crop = new Vector2(0f, 0f);
+        
+        if(aspectRatio > ASPECT_RATIO)
+        {
+            scale = (float)arg1 / (float)VIRTUAL_HEIGHT;
+            crop.x = (arg0 - VIRTUAL_WIDTH * scale) / 2.0f;
+        }
+        else if(aspectRatio < ASPECT_RATIO)
+        {
+            scale = (float)arg0 / (float)VIRTUAL_WIDTH;
+            crop.y = (arg1 - VIRTUAL_HEIGHT * scale) / 2.0f;
+        }
+        else
+        {
+            scale = (float)arg0 / (float)VIRTUAL_WIDTH;
+        }
+
+        float w = (float)VIRTUAL_WIDTH * scale;
+        float h = (float)VIRTUAL_HEIGHT * scale;
+        
+        _viewport = new Rectangle(crop.x, crop.y, w, h);
+
+        pixelPerMeter = 32.0f; //Gdx.graphics.getWidth() / VIRTUAL_WIDTH;	// 32.0f;			//------ ??? static or dynamic??
+        Gdx.app.log("ppm", "" + pixelPerMeter);
 	}
 
 	
@@ -127,6 +153,6 @@ public abstract class Game implements ApplicationListener, InputProcessor {
 //--------------------------------
 
 	public OrthographicCamera getCamera() {
-		return cam;
+		return _camera;
 	}
 }

@@ -20,6 +20,7 @@ import de.philweb.bubblr.tools.LanguageManager;
 public class Welt {
 	
 	protected Game game;
+	Bubblr bubblr;
 	public World box2dwelt;
 	ContactListener ContactListener;
 	
@@ -34,20 +35,8 @@ public class Welt {
 	
 	//================= ... ====================
 
-	public static float PIXELS_PER_METER = 60.0f;
+//	public static float PIXELS_PER_METER = 60.0f;
 	
-//	public static final float WORLD_WIDTH = 15; // 10;
-//	public static final float WORLD_HEIGHT = 10; // 15 * 20;
-		
-//	public static final float mapgrenze_rechts = 8.79f;	// in metern (60 px pro meter)
-//	public static final float mapgrenze_links = 0.85f;
-//	public static final float mapgrenze_oben = 8.0f;
-//	public static final float mapgrenze_unten = 0.0f;
-	
-//	public static final int OFFSET_X_MAP_SCREEN_PX = 115;		// to display mapName in renderer (was formerly in gamescreen)
-//	public static final int OFFSET_Y_MAP_SCREEN_PX = 6;			// to display mapName in renderer (was formerly in gamescreen)
-	
-
 	
 	//====== for fixed-timestep box2d simulation =========
 	public float accum = 0f;
@@ -150,6 +139,7 @@ public class Welt {
 	
 	public Welt (Bubblr bubblr, final World box2dwelt, float monsterSpeed) {
 	
+		this.bubblr = bubblr;
 		this.lang = bubblr.lang;
 		this.prefs = bubblr.prefs;
 		this.box2dwelt = box2dwelt;
@@ -339,7 +329,7 @@ public class Welt {
 		
 		
 					//--- setup Player
-		player1 = new character_goodGuy("player1", "character", playerList.get(0).x + character_goodGuy.RENDERVERSATZ_X, playerList.get(0).y + character_goodGuy.RENDERVERSATZ_Y, PLAYER_JUMP_VELOCITY, PLAYER_MOVE_VELOCITY, true, box2dwelt, this);	// 4. parameter = blickrichtung
+		player1 = new character_goodGuy(bubblr, "player1", "character", playerList.get(0).x + character_goodGuy.RENDERVERSATZ_X, playerList.get(0).y + character_goodGuy.RENDERVERSATZ_Y, PLAYER_JUMP_VELOCITY, PLAYER_MOVE_VELOCITY, true, box2dwelt, this);	// 4. parameter = blickrichtung
 		player1.body.setMassData(masse);
 		players.add(player1);
 			

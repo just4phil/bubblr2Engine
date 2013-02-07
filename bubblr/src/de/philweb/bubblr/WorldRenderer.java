@@ -26,16 +26,7 @@ public class WorldRenderer  {
 	
 	static final int tiles_horizontally = 32; 
 	static final int tiles_vertically = 26;
-	
-//	public static final int tilesize_x = 18; 
-//	public static final int tilesize_y = 18;
-//	static final float FRUSTUM_WIDTH = Welt.WORLD_WIDTH; 
-//	static final float FRUSTUM_HEIGHT = Welt.WORLD_HEIGHT;	
-//	public static int screenWidth;
-//	public static int screenHeight;
-//	public static float PIXELS_PER_METER_x;
-//	public static float PIXELS_PER_METER_y;
-	
+		
 	TextureRegion background;
 	boolean gotKeyframe; //--- zum checken ob ein keyframe gefunden wurde, falls nicht -> default (siehe renderCollectables)
 	 
@@ -83,11 +74,6 @@ public class WorldRenderer  {
 	
 	
 	public WorldRenderer (SpriteBatch batch, Level level, int levelNumber, Bubblr bubblr) {
-		
-//		screenWidth = Gdx.graphics.getWidth();			// sp�ter zum resizen f�r unterschiedliche screen-gr��en nutzen?!
-//		screenHeight = Gdx.graphics.getHeight();		// sp�ter zum resizen f�r unterschiedliche screen-gr��en nutzen?!
-	
-//		setPixPerMeter();
 	
 		this.bubblr = bubblr;
 		this.world = level.world;
@@ -106,9 +92,8 @@ public class WorldRenderer  {
 		tiledMapHelper = new TiledMapHelper();
 		tiledMapHelper.setPackerDirectory("data/packer");
 		tiledMapHelper.loadMap("data/world/level1/" + mapString);
-		tiledMapHelper.loadCollisions("data/collisions.txt", level.box2dwelt, Welt.PIXELS_PER_METER); // 60 = PIXELS_PER_METER
+		tiledMapHelper.loadCollisions("data/collisions.txt", level.box2dwelt, bubblr.pixelPerMeter); 
 		//------------------------------------------------------	
-		
 		
 	}
 
@@ -118,27 +103,35 @@ public class WorldRenderer  {
 	
 	public void render (Level level, SpriteBatch batch) {
 				
-		gameplayCamera.update();
-		gameplayCamera.apply(Gdx.gl10);
-		
-		// --- render background: hintergrund auf schwarz setzen --------
 		Gdx.gl.glClearColor(0, 0, 0, 1);
-		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		//-------------------------------------------
-		
-		
-		
-		//----------- cam position for tiled map ----------------------------------------------------
+        Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+        gameplayCamera.update();
+//        gameplayCamera.apply(Gdx.gl10);
+        
+        Gdx.gl.glViewport((int) bubblr._viewport.x, (int) bubblr._viewport.y,
+        				  (int) bubblr._viewport.width, (int) bubblr._viewport.height);
+
+
+      //------------- render tiledmap -----------
+        
 		gameplayCamera.position.x = 288;	 // (800 / 2) - ((800 - 512) / 2)	
-		gameplayCamera.position.y = 234;
+		gameplayCamera.position.y = 234;	// TODO: hier ggf. später ppm * tilegröße oder so wenn verschiedene assets für versch. auflösungen
 		gameplayCamera.update();
-				
-		tiledMapHelper.tileMapRenderer.getProjectionMatrix().set(gameplayCamera.combined);
+        
+        tiledMapHelper.tileMapRenderer.getProjectionMatrix().set(gameplayCamera.combined);
 		tmp.set(0, 0, 0);
 		gameplayCamera.unproject(tmp);
 		
-		//------------- render tiledmap -----------
+		
 		tiledMapHelper.render((int) tmp.x, (int) tmp.y, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+//        -------------------------------------------------------		
+		
+        
+		
+		
+
+
+		
 		
 		
 		//---- prepare cam for gameplay view -------------		
@@ -165,8 +158,8 @@ public class WorldRenderer  {
 			
 			//--- sprite an die position des box2d- jumper-bodies setzen
 			batch.draw(keyFrame, 
-				(HelperFunctions.meterToPixels(player.body.getPosition().x)) - (player.getWidth_px() / 2), 
-				(HelperFunctions.meterToPixels(player.body.getPosition().y)) - (player.getHeight_px() / 2) +2f);
+				(bubblr.meterToPixels(player.body.getPosition().x)) - (player.getWidth_px() / 2), 
+				(bubblr.meterToPixels(player.body.getPosition().y)) - (player.getHeight_px() / 2) +2f);
 			
 			//--- wenn sprite oben gewendet wurde, dann wieder zur�ck wenden -----
 			if (player.flip == true) {
@@ -184,30 +177,11 @@ public class WorldRenderer  {
 		
 		
 		//----- Debugging ---------------------------
-//		debugRenderer.render(box2dwelt, tiledMapHelper.getCamera().combined.scale(Welt.PIXELS_PER_METER, Welt.PIXELS_PER_METER, Welt.PIXELS_PER_METER));
+		debugRenderer.render(box2dwelt, gameplayCamera.combined.scale(bubblr.pixelPerMeter, bubblr.pixelPerMeter, bubblr.pixelPerMeter));
 		
 		
 	}
 
-	
-	
-//===========================================================================
-	
-
-
-//		public static void setPixPerMeter() {
-//			
-//			screenWidth = Gdx.graphics.getWidth();			// sp�ter zum resizen f�r unterschiedliche screen-gr��en nutzen?!
-//			screenHeight = Gdx.graphics.getHeight();		// sp�ter zum resizen f�r unterschiedliche screen-gr��en nutzen?!
-//			
-//			--- pixel pro meter dynamisch aus der aufl�sung errechnen ---> screen wird ggf. gestretcht
-//			PIXELS_PER_METER_x = screenWidth / FRUSTUM_WIDTH;
-//			PIXELS_PER_METER_y = screenHeight / FRUSTUM_HEIGHT;
-//			
-//			Gdx.app.log("Resolution", "" + screenWidth + " x " + screenHeight + " // AspectRatio: " + ((float)screenWidth/screenHeight) + " // PIXELS_PER_METER: " + PIXELS_PER_METER_x + " x " +PIXELS_PER_METER_y);
-//			Gdx.app.log("Welt.WORLD_WIDTH", "" + Welt.WORLD_WIDTH + "" + PIXELS_PER_METER_x + " // Welt.WORLD_WIDTH * PIXELS_PER_METER_x: " + Welt.WORLD_WIDTH * PIXELS_PER_METER_x);
-//		}
-//---------------------	
-	
+		
 }
 

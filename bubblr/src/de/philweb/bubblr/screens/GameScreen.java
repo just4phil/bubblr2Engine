@@ -60,6 +60,8 @@ public class GameScreen extends Screen {
 
 	
 	OrthographicCamera guiCam;
+	
+	
 	Vector3 touchPoint;
 	
 	public Level level;
@@ -178,10 +180,7 @@ public class GameScreen extends Screen {
 		
 		
 		guiCam = bubblr.getCamera();
-		
-//		guiCam = new OrthographicCamera(800, 480); // (800, 480);
-//		guiCam.position.set(800 / 2, 480 / 2, 0); // (800 / 2, 480 / 2, 0);
-		
+
 		
 		touchPoint = new Vector3();
 		batcher = new SpriteBatch();
@@ -208,7 +207,7 @@ public class GameScreen extends Screen {
 		//--------- liest die objekte aus der map aus und �bergibt diese an das weltobjekt -----
 		level.mapName = bubblr.lang.getString(renderer.tiledMapHelper.getMapPropertyString("mapName"));
 		level.mapToast = bubblr.lang.getString(renderer.tiledMapHelper.getMapPropertyString("mapToast"));
-		players = renderer.tiledMapHelper.getCharacterList("player");	
+		players = renderer.tiledMapHelper.getCharacterList("player", bubblr.pixelPerMeter);	
 
 		level.world.characterSetup(players, level.world.mapTimeLimit);
 		
@@ -531,7 +530,7 @@ public class GameScreen extends Screen {
 		renderer.render(level, batcher);				// -------------- render --------------------
 
 		
-		//----------- prepare cam for GUI and text ----------------------------------------------------
+		//----------- prepare cam for GUI and text ----------------------------------------
 		guiCam.position.x = 400; // bubblr.screenWidth / 2.0f; //camWidth / 2.0f;	 	// 400	
 		guiCam.position.y = 240; // bubblr.screenHeight / 2.0f; //camHeight / 2.0f;	// 240
 		guiCam.update();
@@ -542,6 +541,12 @@ public class GameScreen extends Screen {
 		//------- render gui and text ------------------------------
 		batcher.enableBlending();
 		batcher.begin();
+		
+		//---- for visual debugging of touchareas ---------------------
+		batcher.draw(Assets.menuButton1, readyBounds.getX(), readyBounds.getY(), readyBounds.getWidth(), readyBounds.getHeight());
+		batcher.draw(Assets.menuButton1, resumeBounds.getX(), resumeBounds.getY(), resumeBounds.getWidth(), resumeBounds.getHeight());
+		batcher.draw(Assets.menuButton1, quitBounds.getX(), quitBounds.getY(), quitBounds.getWidth(), quitBounds.getHeight());
+		//----------------------------------------------------------------
 		
 		
 		switch (state) {
@@ -558,7 +563,8 @@ public class GameScreen extends Screen {
 		
 		presentLifes();
 		presentData();
-
+		
+		
 		batcher.end();
 		
 		

@@ -36,12 +36,12 @@ public class DynamicGameObject extends GameObject {
 	}
 	
 	
-	public void initialize_DynamicGameObject (String characterName, String typ, float x, float y, float width, float height, float fix_verkleinerung_x, float fix_verkleinerung_y, boolean fixedRotation, World box2dwelt) {
+	public void initialize_DynamicGameObject (Bubblr bubblr, String characterName, String typ, float x, float y, float width, float height, float fix_verkleinerung_x, float fix_verkleinerung_y, boolean fixedRotation, World box2dwelt) {
 		
 		this.width = width;
 		this.height = height;
 		
-		initialize_GameObject(characterName, typ, x, y, width, height, fix_verkleinerung_x, fix_verkleinerung_y, fixedRotation, box2dwelt);
+		initialize_GameObject(bubblr, characterName, typ, x, y, width, height, fix_verkleinerung_x, fix_verkleinerung_y, fixedRotation, box2dwelt);
 		
 		
 	}
