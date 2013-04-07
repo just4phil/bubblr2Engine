@@ -1,37 +1,25 @@
 package de.philweb.bubblr.screens;
 
 import java.util.ArrayList;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
-import android.widget.Toast;
-
-import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL10;
-import com.badlogic.gdx.graphics.GLCommon;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
-import com.swarmconnect.Swarm;
-import com.swarmconnect.SwarmLeaderboardScore;
 
 import de.philweb.bubblr.Assets;
 import de.philweb.bubblr.Bubblr;
 import de.philweb.bubblr.Character;
-import de.philweb.bubblr.GameObject;
 import de.philweb.bubblr.Level;
 import de.philweb.bubblr.OverlapTester;
 import de.philweb.bubblr.Welt;
 import de.philweb.bubblr.WorldRenderer;
 import de.philweb.bubblr.tools.BubblrPreferences;
-import de.philweb.bubblr.tools.HelperFunctions;
 import de.philweb.bubblr.tools.NinePatch;
 
 
@@ -220,7 +208,7 @@ public class GameScreen extends Screen {
 
    
 		
-		bubblr.myRequestHandler.showToast(bubblr.lang.getString("Press PLAY to start"), Toast.LENGTH_SHORT);
+//		bubblr.myRequestHandler.showToast(bubblr.lang.getString("Press PLAY to start"), Toast.LENGTH_SHORT);
 		
 		
 	}
